@@ -1,0 +1,11 @@
+{
+  "virtualArithmeticCalls": 27,
+  "removedHelperProperties": 16316,
+  "removedNoopCalls": 1410,
+  "restoredParameterLists": 1133,
+  "renamedBindings": 11337,
+  "roleSupportedNames": 1555,
+  "modules": 53,
+  "outputBytes": 1963319,
+  "applicationExecuted": false
+}

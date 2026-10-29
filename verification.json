@@ -1,0 +1,10 @@
+{
+  "proxyFixtureComparisons": 5,
+  "approvalFixtureComparisons": 28,
+  "differentialChecksPassed": true,
+  "parsedModuleCount": 53,
+  "originalUnchanged": true,
+  "pluginInitialized": false,
+  "networkUsed": false,
+  "limitation": "Checks cover selected isolated functions, not full runtime equivalence or a live model bypass."
+}
