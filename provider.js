@@ -1,6 +1,3 @@
-// UNOFFICIAL PRIVATE RECONSTRUCTION FOR SECURITY REVIEW.
-// Names are inferred; remaining generic names are recorded in symbol-map.json.
-// Not an audited runnable release. Original copyright/license retained below.
 //@name hush27_mask_gpt_5_6_sol_provider
 //@display-name Mask v0.12.97-auth-cache-routing-canary.2
 //@api 3.0
@@ -8,86 +5,7 @@
 //@version 0.12.97-auth-cache-routing-canary.2
 //@build-profile mask-production-source-bound-v1
 //@roleplay-mode source-bound-review-quarantine-suppression-cache
-//@update-url https://019fa868-1c4d-7747-8a2a-40dc8965039d.router.lavista.wiki/mask-gpt-5.6-sol-provider.js
-//@license LicenseRef-Mask-Software-Personal-1.1
-//@license-url https://019fa868-1c4d-7747-8a2a-40dc8965039d.router.lavista.wiki/licenses/LicenseRef-Mask-Software-Personal-1.1.txt
 
-/*!
-Mask Software Personal License 1.1
-
-Copyright (c) 2026 hush27. All rights reserved.
-
-License identifier: LicenseRef-Mask-Software-Personal-1.1
-
-1. Covered Software
-
-This license applies to Mask software expressly distributed under this license, including the Mask provider and auxiliary plugins, their source code, build and deployment tooling, development builds, obfuscated release builds, and software documentation ("Covered Software").
-
-2. Personal License Grant
-
-Subject to this license, hush27 grants a natural person who receives an authorized copy a limited, worldwide, non-exclusive, non-transferable, revocable license to:
-
-a. download, install, execute, and use the Covered Software for personal purposes;
-b. keep copies on devices personally controlled by that person, including copies synchronized through RisuAI;
-c. make a reasonable number of private backup copies.
-
-"Personal purposes" means use for the person's own projects and enjoyment, not use on behalf of an employer, client, business, organization, or paid service. This section does not grant permission to modify, adapt, reverse engineer, deobfuscate, decrypt, debug, inspect, extract code from, or make the Covered Software interoperable. Those permissions are available only under Section 3.
-
-3. Arca.live AI Chat Channel Modification Grant
-
-An "Eligible Channel Recipient" is a natural person who:
-
-a. lawfully received an authorized official distribution of the Covered Software;
-b. holds an arca.live account and actually uses the Arca.live AI Chat channel at https://arca.live/b/characterai; and
-c. satisfies those conditions both when obtaining the authorized copy and whenever exercising a permission in this section or Section 4.
-
-Only an Eligible Channel Recipient may:
-
-a. modify, adapt, and make the Covered Software interoperable solely for that recipient's private use;
-b. reverse engineer, deobfuscate, decrypt, debug, inspect, or extract code from a release build to the reasonable extent necessary for a private modification permitted by subsection a, interoperability with an environment personally controlled by that recipient, or good-faith non-commercial security analysis; and
-c. keep and execute resulting readable, modified, or compatibility copies solely on devices personally controlled by that recipient.
-
-These permissions are personal and non-transferable. They do not extend to another person merely because that person received a copy, code, analysis, assistance, or access from an Eligible Channel Recipient. This section does not itself grant permission to publish analysis results or code.
-
-4. Private Update Changes
-
-On a private modified copy permitted by Section 3, an Eligible Channel Recipient may disable, remove, or replace an automatic-update URL, update notice, or update behavior when reasonably necessary to prevent an official update from overwriting the modification or to use an update path controlled solely by that recipient.
-
-The private modified copy must retain the original copyright, license, attribution, and origin notices, must be identified in its source or metadata as an unofficial private modification, and must not represent a replacement update path or modified build as official. A replacement update path may serve only devices personally controlled by the same recipient and may not provide the Covered Software or a modified copy to another person.
-
-5. User Data and Outputs
-
-API keys, settings, logs, characters, lore, conversations, and other data supplied by a user are not licensed to hush27 by this license. Text or other content produced through normal use of the Covered Software is not Covered Software and is not restricted by this license. This section does not grant rights in third-party material that may appear in user data or outputs.
-
-6. Restrictions
-
-Unless hush27 gives prior written permission, a recipient may not:
-
-a. publish, share, mirror, redistribute, sublicense, sell, rent, lease, or otherwise transfer the Covered Software or access to it;
-b. distribute a modified version, derivative work, extracted source, readable reconstruction, deobfuscated code, technical-protection-removed build, or substantially similar replacement derived from the Covered Software;
-c. use the Covered Software as part of a commercial, organizational, hosted, subscription, consulting, or other paid product or service;
-d. remove, conceal, or alter a copyright, license, attribution, or origin notice;
-e. exercise or claim a permission in Sections 3 or 4 without satisfying every Eligible Channel Recipient condition at the time of that exercise;
-f. use the permissions in Sections 3 or 4 to provide the Covered Software or a modified copy to another person, operate a substitute distribution channel, or imply that a private modification is an official build;
-g. use security analysis or information obtained from it for unauthorized access, service disruption, data theft, or another attack; or
-h. use the Mask or hush27 name or marks to imply endorsement, sponsorship, or official status.
-
-7. Legal Exceptions
-
-Nothing in this license limits a right that cannot lawfully be waived or restricted, including any mandatory exception under applicable law.
-
-8. Termination
-
-The license grant ends automatically when a recipient violates this license. On termination, the recipient must stop using and delete all copies of the Covered Software under that recipient's control, except copies that applicable law requires the recipient to retain. Sections 5 through 10 survive termination where applicable.
-
-9. Disclaimer
-
-THE COVERED SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW, HUSH27 IS NOT LIABLE FOR ANY CLAIM, LOSS, DAMAGE, OR OTHER LIABILITY ARISING FROM OR RELATED TO THE COVERED SOFTWARE OR ITS USE.
-
-10. Other Rights
-
-No patent, trademark, publicity, privacy, or other right is granted except the copyright permission stated in this license. All rights not expressly granted are reserved by hush27. Additional permissions or commercial licenses require prior written permission from hush27.
-*/
 
 (() => {
   function evaluateArguments() {
