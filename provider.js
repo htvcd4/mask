@@ -1,10 +1,93 @@
-//@name hush27_mask_gpt_5_6_sol_provider:13
+// UNOFFICIAL PRIVATE RECONSTRUCTION FOR SECURITY REVIEW.
+// Names are inferred; remaining generic names are recorded in symbol-map.json.
+// Not an audited runnable release. Original copyright/license retained below.
+//@name hush27_mask_gpt_5_6_sol_provider
 //@display-name Mask v0.12.97-auth-cache-routing-canary.2
 //@api 3.0
 //@allowed-ipc hush27_mask_gpt_5_6_sol_provider copilot-manager hush27_mask_advanced_memory hush27_mask_semantic_companion hush27_mask_local_tools
 //@version 0.12.97-auth-cache-routing-canary.2
 //@build-profile mask-production-source-bound-v1
 //@roleplay-mode source-bound-review-quarantine-suppression-cache
+//@update-url https://019fa868-1c4d-7747-8a2a-40dc8965039d.router.lavista.wiki/mask-gpt-5.6-sol-provider.js
+//@license LicenseRef-Mask-Software-Personal-1.1
+//@license-url https://019fa868-1c4d-7747-8a2a-40dc8965039d.router.lavista.wiki/licenses/LicenseRef-Mask-Software-Personal-1.1.txt
+
+/*!
+Mask Software Personal License 1.1
+
+Copyright (c) 2026 hush27. All rights reserved.
+
+License identifier: LicenseRef-Mask-Software-Personal-1.1
+
+1. Covered Software
+
+This license applies to Mask software expressly distributed under this license, including the Mask provider and auxiliary plugins, their source code, build and deployment tooling, development builds, obfuscated release builds, and software documentation ("Covered Software").
+
+2. Personal License Grant
+
+Subject to this license, hush27 grants a natural person who receives an authorized copy a limited, worldwide, non-exclusive, non-transferable, revocable license to:
+
+a. download, install, execute, and use the Covered Software for personal purposes;
+b. keep copies on devices personally controlled by that person, including copies synchronized through RisuAI;
+c. make a reasonable number of private backup copies.
+
+"Personal purposes" means use for the person's own projects and enjoyment, not use on behalf of an employer, client, business, organization, or paid service. This section does not grant permission to modify, adapt, reverse engineer, deobfuscate, decrypt, debug, inspect, extract code from, or make the Covered Software interoperable. Those permissions are available only under Section 3.
+
+3. Arca.live AI Chat Channel Modification Grant
+
+An "Eligible Channel Recipient" is a natural person who:
+
+a. lawfully received an authorized official distribution of the Covered Software;
+b. holds an arca.live account and actually uses the Arca.live AI Chat channel at https://arca.live/b/characterai; and
+c. satisfies those conditions both when obtaining the authorized copy and whenever exercising a permission in this section or Section 4.
+
+Only an Eligible Channel Recipient may:
+
+a. modify, adapt, and make the Covered Software interoperable solely for that recipient's private use;
+b. reverse engineer, deobfuscate, decrypt, debug, inspect, or extract code from a release build to the reasonable extent necessary for a private modification permitted by subsection a, interoperability with an environment personally controlled by that recipient, or good-faith non-commercial security analysis; and
+c. keep and execute resulting readable, modified, or compatibility copies solely on devices personally controlled by that recipient.
+
+These permissions are personal and non-transferable. They do not extend to another person merely because that person received a copy, code, analysis, assistance, or access from an Eligible Channel Recipient. This section does not itself grant permission to publish analysis results or code.
+
+4. Private Update Changes
+
+On a private modified copy permitted by Section 3, an Eligible Channel Recipient may disable, remove, or replace an automatic-update URL, update notice, or update behavior when reasonably necessary to prevent an official update from overwriting the modification or to use an update path controlled solely by that recipient.
+
+The private modified copy must retain the original copyright, license, attribution, and origin notices, must be identified in its source or metadata as an unofficial private modification, and must not represent a replacement update path or modified build as official. A replacement update path may serve only devices personally controlled by the same recipient and may not provide the Covered Software or a modified copy to another person.
+
+5. User Data and Outputs
+
+API keys, settings, logs, characters, lore, conversations, and other data supplied by a user are not licensed to hush27 by this license. Text or other content produced through normal use of the Covered Software is not Covered Software and is not restricted by this license. This section does not grant rights in third-party material that may appear in user data or outputs.
+
+6. Restrictions
+
+Unless hush27 gives prior written permission, a recipient may not:
+
+a. publish, share, mirror, redistribute, sublicense, sell, rent, lease, or otherwise transfer the Covered Software or access to it;
+b. distribute a modified version, derivative work, extracted source, readable reconstruction, deobfuscated code, technical-protection-removed build, or substantially similar replacement derived from the Covered Software;
+c. use the Covered Software as part of a commercial, organizational, hosted, subscription, consulting, or other paid product or service;
+d. remove, conceal, or alter a copyright, license, attribution, or origin notice;
+e. exercise or claim a permission in Sections 3 or 4 without satisfying every Eligible Channel Recipient condition at the time of that exercise;
+f. use the permissions in Sections 3 or 4 to provide the Covered Software or a modified copy to another person, operate a substitute distribution channel, or imply that a private modification is an official build;
+g. use security analysis or information obtained from it for unauthorized access, service disruption, data theft, or another attack; or
+h. use the Mask or hush27 name or marks to imply endorsement, sponsorship, or official status.
+
+7. Legal Exceptions
+
+Nothing in this license limits a right that cannot lawfully be waived or restricted, including any mandatory exception under applicable law.
+
+8. Termination
+
+The license grant ends automatically when a recipient violates this license. On termination, the recipient must stop using and delete all copies of the Covered Software under that recipient's control, except copies that applicable law requires the recipient to retain. Sections 5 through 10 survive termination where applicable.
+
+9. Disclaimer
+
+THE COVERED SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW, HUSH27 IS NOT LIABLE FOR ANY CLAIM, LOSS, DAMAGE, OR OTHER LIABILITY ARISING FROM OR RELATED TO THE COVERED SOFTWARE OR ITS USE.
+
+10. Other Rights
+
+No patent, trademark, publicity, privacy, or other right is granted except the copyright permission stated in this license. All rights not expressly granted are reserved by hush27. Additional permissions or commercial licenses require prior written permission from hush27.
+*/
 
 (() => {
   function evaluateArguments() {
@@ -462,18 +545,18 @@
         ;
         if ((argument) === null) return "null";
         if (Array.isArray((argument))) return "[" + (argument).map(argument_2 => {
-          return (argument_2 === null) ? "null": (0, helperFunction_13)(argument_2);
+          return (argument_2 === (void 0)) ? "null": (0, helperFunction_13)(argument_2);
         }
         ).join(",") + "]";
         if ((argument) && typeof (argument) === "object") return (("{" + Object.keys((argument)).filter((argument_2) => {
-          return ((argument)[(argument_2)]) !== (null);
+          return (argument)[(argument_2)] !== (void 0);
         }
         ).sort().map((argument_2) => {
-          return ("" + JSON.stringify((argument_2)) + ":") + (helperFunction_13((argument)[(argument_2)]));
+          return ("" + JSON.stringify((argument_2)) + ":") + helperFunction_13((argument)[(argument_2)]);
         }
         ).join(",")) + "}");
         const localValue_6 = JSON.stringify((argument));
-        if (localValue_6 === null) throw new TypeError("Unsupported value in stable serialization.");
+        if (localValue_6 === (void 0)) throw new TypeError("Unsupported value in stable serialization.");
         return localValue_6;
       }
       async function helperFunction_14(argument, localValue_6 = globalThis.crypto) {
@@ -1160,7 +1243,7 @@
           }
           ,
           ["cleanup"]() {
-            localValue_8 !== null && globalThis.clearTimeout?.(localValue_8), signal?.removeEventListener?.("abort", helperFunction_17);
+            localValue_8 !== (void 0) && globalThis.clearTimeout?.(localValue_8), signal?.removeEventListener?.("abort", helperFunction_17);
           }
         }
         ;
@@ -1191,7 +1274,7 @@
         if ((argument) == null || (argument) === "") return null;
         if (typeof (argument) !== "object" || Array.isArray((argument))) throw (0, helperFunction_13)("vertex_credential_invalid");
         if ((argument).type !== "service_account") throw helperFunction_13("vertex_credential_type_unsupported");
-        if ((argument).token_uri !== null && (argument).token_uri !== token_uri) throw helperFunction_13("vertex_token_uri_unsupported");
+        if ((argument).token_uri !== (void 0) && (argument).token_uri !== token_uri) throw helperFunction_13("vertex_token_uri_unsupported");
         if (["client_email", "private_key_id", "private_key"].some((argument_2) => {
           return ((typeof (argument)[(argument_2)]) !== "string") || ! (argument)[(argument_2)].trim();
         }
@@ -1371,7 +1454,7 @@
       ;
       argumentState.length = 0;
       const requestWait_e0 = bundleModules["request-wait.mjs"].e0, endpointUrl = "https://api.github.com/copilot_internal/v2/token", endpointUrl_2 = "https://api.github.com/copilot_internal/user", endpointUrl_3 = "https://api.github.com/graphql", textValue_2 = "query{viewer{databaseId login}}", endpointUrl_4 = "https://api.githubcopilot.com", userAgent = "opencode/1.14.20", userAgent_2 = "opencode/1.14.20 ai-sdk/provider-utils/4.0.23 runtime/bun/1.3.11, opencode/1.14.20", userAgent_3 = "GitHubCopilotChat/0.43.0", userAgent_4 = "copilot/1.0.32 (client/github/cli win32 v24.11.1) term/unknown", textValue_3 = "Ov23liLllRrlaeF9iyJD", lookupMap = new Map(), lookupMap_2 = new Map(), lookupMap_3 = new Map(), lookupMap_4 = new Map();
-      argumentState[183] = null;
+      argumentState[183] = (void 0);
       function helperFunction_13(argument, localValue_8 = 0) {
         const localValue_9 = new Error((("Copilot connection failed (" + argument) + (localValue_8 ? ", HTTP " + localValue_8: "")) + ").");
         return void (localValue_9.code = argument, localValue_9.status = localValue_8), localValue_9;
@@ -1429,7 +1512,7 @@
         if (! ["github", "github-direct", "session"].includes(authentication)) throw (0, helperFunction_13)("invalid_provider_setting");
         const clientId = String(localValue_8.clientId ?? "").trim() || textValue_3;
         if (clientId.length > 128 || new RegExp("[\\r\\n]", "").test(clientId)) throw helperFunction_13("invalid_provider_setting");
-        if (localValue_8.endpointMode !== null && ! ["auto", "manual"].includes(localValue_8.endpointMode)) throw helperFunction_13("invalid_provider_setting");
+        if (localValue_8.endpointMode !== (void 0) && ! ["auto", "manual"].includes(localValue_8.endpointMode)) throw helperFunction_13("invalid_provider_setting");
         const clientProfile = (0, helperFunction_17)({
           ... localValue_8,
           authentication: authentication
@@ -1438,7 +1521,7 @@
         return {
           authentication: authentication,
           clientId: clientId,
-          ... localValue_8.clientProfile !== null ? {
+          ... localValue_8.clientProfile !== (void 0) ? {
             clientProfile: clientProfile
           }
           : {
@@ -1481,7 +1564,7 @@
         if (! argument || ! Object.hasOwn(argument, "supportedEndpoints")) return null;
         if (! Array.isArray(argument.supportedEndpoints)) throw (0, helperFunction_13)("copilot_model_metadata_invalid");
         if (argument.supportedEndpoints.some((argument_2) => {
-          return ((typeof (argument_2)) !== ("string")) || ! (argument_2).trim();
+          return ((typeof (argument_2)) !== "string") || ! (argument_2).trim();
         }
         )) throw (0, helperFunction_13)("copilot_model_metadata_invalid");
         return new Set(argument.supportedEndpoints.map(helperFunction_18).filter(Boolean));
@@ -1497,7 +1580,7 @@
         const localValue_8 = helperFunction_16(options), clientProfile = helperFunction_17(localValue_8), dialect_2 = String(settingsRecord_3.Tqfzw(dialect, "")).trim();
         if (! Object.hasOwn(localValue_6, dialect_2)) throw (0, helperFunction_13)("copilot_unsupported_protocol");
         if (clientProfile === "cli" && (dialect_2 === "anthropic-messages")) throw (0, helperFunction_13)("copilot_client_profile_protocol_mismatch");
-        if ((modelMetadata !== null) && (modelMetadata !== null)) {
+        if ((modelMetadata !== (void 0)) && (modelMetadata !== null)) {
           if (! modelMetadata || ((typeof modelMetadata) !== "object") || Array.isArray(modelMetadata)) throw helperFunction_13("copilot_model_metadata_invalid");
           if (String(modelMetadata.modelId ?? "").trim() !== (0, String)(modelId ?? "").trim() || modelMetadata.clientProfile !== clientProfile) throw helperFunction_13("copilot_model_metadata_mismatch");
           const sourceEndpoint = modelMetadata.sourceEndpoint;
@@ -1552,7 +1635,7 @@
           const localValue_12 = await helperFunction_14(fetchImpl, endpointUrl_2, {
             headers: helperFunction_24(token)
           }
-          , null, "copilot_account_lookup_failed"), localValue_13 = lookupMap_2.get(localValue_8)?.value.apiEndpoint ?? "", localValue_14 = ((typeof localValue_12.endpoints?.api) === "string") && localValue_12.endpoints.api ? (0, helperFunction_29)(localValue_12.endpoints.api): "", settingsRecord_5 = {
+          , (void 0), "copilot_account_lookup_failed"), localValue_13 = lookupMap_2.get(localValue_8)?.value.apiEndpoint ?? "", localValue_14 = ((typeof localValue_12.endpoints?.api) === "string") && localValue_12.endpoints.api ? (0, helperFunction_29)(localValue_12.endpoints.api): "", settingsRecord_5 = {
             plan: localValue_12.copilot_plan ?? "",
             resetAt: localValue_12.quota_reset_date_utc ?? localValue_12.quota_reset_date ?? null,
             quotas: localValue_12.quota_snapshots ?? {
@@ -1611,7 +1694,7 @@
       }
       function helperFunction_26(argument, clientId, argument_2) {
         if ((argument).error || typeof (argument).access_token !== "string" || ! (argument).access_token.trim()) throw helperFunction_13((argument).error === "bad_refresh_token" ? "copilot_login_required": "copilot_auth_failed");
-        if (! (argument).refresh_token && (argument).expires_in === null && ! (argument_2)) return null;
+        if (! (argument).refresh_token && (argument).expires_in === (void 0) && ! (argument_2)) return null;
         if (typeof (argument).refresh_token !== "string" || ! (argument).refresh_token || ! Number.isFinite((argument).expires_in) || ((argument).expires_in <= 0) || ! Number.isFinite((argument).refresh_token_expires_in) || (argument).refresh_token_expires_in <= 0) throw helperFunction_13("copilot_invalid_response");
         const localValue_8 = Date.now();
         return {
@@ -1667,7 +1750,7 @@
         ;
       }
       function helperFunction_29(... argumentState_2) {
-        void (argumentState_2.length = 1, argumentState_2.a = null);
+        void (argumentState_2.length = 1, argumentState_2.a = (void 0));
         try {
           argumentState_2.a = new URL(argumentState_2[0] || endpointUrl_4);
         }
@@ -1713,7 +1796,7 @@
                     ["Sec-Fetch-Dest"]: "empty"
                   }
                 }
-                , null, "copilot_session_exchange_failed");
+                , (void 0), "copilot_session_exchange_failed");
                 if (typeof localValue_18.token !== "string" || ! Number.isFinite(localValue_18.expires_at) || ((localValue_18.expires_at * 1000) <= Date.now())) throw helperFunction_13("copilot_invalid_response");
                 const settingsRecord_7 = {
                   token: localValue_18.token,
@@ -2721,7 +2804,7 @@
         return Object.freeze({
           values: (0, helperFunction_13)(items),
           effective: Object.freeze(Object.fromEntries(items.map(argument => {
-            return [argument, argument === "webkit-host-buffered" ? ("buffered"): argument];
+            return [argument, argument === "webkit-host-buffered" ? "buffered": argument];
           }
           ))),
           note: localValue_15 ? "": "background-resume-unsupported",
@@ -3167,7 +3250,7 @@
       function helperFunction_23(argument, argument_2) {
         void 0;
         const localValue_15 = argument.filter((argument_3) => {
-          return ((argument_3).fields[argument_2]?.support) !== (("unsupported"));
+          return ((argument_3).fields[argument_2]?.support) !== "unsupported";
         }
         ), values = helperFunction_13(localValue_15.flatMap((argument_3) => {
           return (argument_3).fields[argument_2]?.values ?? (argument_3).fields[argument_2]?.modes ?? [];
@@ -3393,7 +3476,7 @@
         = {
         }
         ) {
-          void (super (argument), this.name = "AccountRoutingError", this.code = code), (publicContext !== null) && (this.publicContext = publicContext);
+          void (super (argument), this.name = "AccountRoutingError", this.code = code), (publicContext !== (void 0)) && (this.publicContext = publicContext);
         }
       }
       ;
@@ -3870,8 +3953,8 @@
         if (! localValue_6) return argument;
         let localValue_7 = argument;
         for (const localValue_8 of localValue_6.split(".")) {
-          if (! localValue_8 || uniqueValues_2.has(localValue_8)) return null;
-          if (localValue_7 === null || localValue_7 === null) return null;
+          if (! localValue_8 || uniqueValues_2.has(localValue_8)) return (void 0);
+          if (localValue_7 === null || localValue_7 === (void 0)) return (void 0);
           if (Array.isArray(localValue_7) && new RegExp("^\\d+$", "").test(localValue_8)) {
             localValue_7 = localValue_7[Number(localValue_8)];
             continue;
@@ -3880,7 +3963,7 @@
             localValue_7 = localValue_7[localValue_8];
             continue;
           }
-          return null;
+          return (void 0);
         }
         return localValue_7;
       }
@@ -3902,7 +3985,7 @@
       = {
       }
       ) {
-        if ((output === null)) return {
+        if ((output === (void 0))) return {
           valid: false,
           errorCode: "missing_parameter",
           output: ("[Terminal Tool Error: missing_parameter] 필수 입력 파라미터가 없습니다: " + argument)
@@ -3948,7 +4031,7 @@
         ;
       }
       function helperFunction_19(output, argument, localValue_6 = "lateCorrections") {
-        if ((argument === null)) {
+        if ((argument === (void 0))) {
           const settingsRecord_5 = {
             valid: true,
             output: output
@@ -4093,7 +4176,7 @@
       }
       ) {
         const localValue_7 = (0, helperFunction_13)(terminalToolName, "Terminal tool name");
-        if ((localValue_6 === null) || localValue_6 === "auto") return "auto";
+        if ((localValue_6 === (void 0)) || localValue_6 === "auto") return "auto";
         if ((localValue_6 === "required")) throw new TypeError("Global required tool choice is not supported by this provider.");
         if (! localValue_6 || ((typeof localValue_6) !== "object") || Array.isArray(localValue_6) || (localValue_6.type !== "function")) throw new TypeError("Tool choice must be auto or a forced terminal function.");
         const localValue_8 = helperFunction_13(localValue_6.name, "Forced function name");
@@ -4151,7 +4234,7 @@
       ) {
         void 0;
         if (! request || typeof request !== "object" || Array.isArray(request)) throw new TypeError("A canonical request is required.");
-        if (toolSelectionPolicy === "forced" || request.tool_choice === null || (request.tool_choice === "auto") || (request.tool_choice === "none") || ! Array.isArray(request.tools) || (request.tools.length === 0)) {
+        if (toolSelectionPolicy === "forced" || request.tool_choice === (void 0) || (request.tool_choice === "auto") || (request.tool_choice === "none") || ! Array.isArray(request.tools) || (request.tools.length === 0)) {
           const settingsRecord_4 = {
             request: request,
             requirement: null
@@ -4166,7 +4249,7 @@
         }
         ;
         const tools = localValue_7 ? request.tools.filter((argument) => {
-          return ((((argument)?.type) === (null)) || (((argument).type) === ("function"))) && ((argument).name ?? (argument).function?.name) === localValue_6;
+          return ((((argument)?.type) === (void 0)) || ((argument).type === "function")) && ((argument).name ?? (argument).function?.name) === localValue_6;
         }
         ): request.tools;
         if (localValue_7 && (tools.length !== 1)) throw new TypeError(("Forced tool is not available: " + localValue_6) + ".");
@@ -4425,7 +4508,7 @@
           const localValue_6 = ((typeof (argument_2)?.call_id) === "string") ? (argument_2).call_id: typeof (argument_2)?.id === "string" ? (argument_2).id: "", localValue_7 = localValue_6 ? [... lookupMap_2.entries()].find(([, localValue_10]) => {
             return localValue_10.id === localValue_6;
           }
-          )?.[0]: null, localValue_8 = localValue_7 ?? helperFunction_36((argument), (argument_2)), localValue_9 = lookupMap_2.get(localValue_8) ?? {
+          )?.[0]: (void 0), localValue_8 = localValue_7 ?? helperFunction_36((argument), (argument_2)), localValue_9 = lookupMap_2.get(localValue_8) ?? {
             id: "",
             name: "",
             arguments: ""
@@ -4813,7 +4896,7 @@
         if (! Array.isArray(argument)) return "";
         return argument.map((argument_2) => {
           ;
-          if (((typeof (argument_2)) === ("string"))) return (argument_2);
+          if (((typeof (argument_2)) === "string")) return (argument_2);
           if (["text", "input_text", "output_text"].includes((argument_2)?.type) && typeof (argument_2).text === "string") return (argument_2).text;
           return "";
         }
@@ -4989,7 +5072,7 @@
           const items = ["store"];
           parameterContract?.fields?.serviceTier?.support !== "unsupported" && items.push("service_tier");
           parameterContract?.fields?.cache?.support !== "unsupported" && items.push("prompt_cache_key", "prompt_cache_options");
-          for (const localValue_7 of items) argument[localValue_7] !== null && (settingsRecord_5[localValue_7] = argument[localValue_7]);
+          for (const localValue_7 of items) argument[localValue_7] !== (void 0) && (settingsRecord_5[localValue_7] = argument[localValue_7]);
         }
         return Array.isArray(argument.tools) && argument.tools.length > 0 && void (settingsRecord_5.tools = argument.tools.map((argument_2) => {
           return helperFunction_17((argument_2), {
@@ -5066,7 +5149,7 @@
         return 0;
       }
       function helperFunction_23(argument) {
-        if (! helperFunction_13((argument))) return null;
+        if (! helperFunction_13((argument))) return (void 0);
         const input_tokens = helperFunction_22((argument), ["prompt_tokens", "input_tokens"]), output_tokens = helperFunction_22((argument), ["completion_tokens", "output_tokens"]), localValue_6 = (argument).prompt_tokens_details ?? (argument).input_tokens_details, localValue_7 = (argument).completion_tokens_details ?? (argument).output_tokens_details;
         return {
           input_tokens: input_tokens,
@@ -5204,7 +5287,7 @@
               incompleteDetails: (status === "incomplete") && reason ? {
                 reason: reason
               }
-              : null,
+              : (void 0),
               terminalEventReceived: terminalEventReceived,
               outputItems: outputItems
             }
@@ -5285,7 +5368,7 @@
         = {
         }
         ) {
-          void (super (argument), this.name = "GatewayProfileError"), (code !== null) && (this.code = code);
+          void (super (argument), this.name = "GatewayProfileError"), (code !== (void 0)) && (this.code = code);
         }
       }
       const localValue_6 = Object.freeze([Object.freeze({
@@ -5617,7 +5700,7 @@
         if (Array.isArray((argument))) return (argument).map(helperFunction_20);
         if ((argument) === null || ((typeof (argument)) !== "object")) return (argument);
         return Object.fromEntries(Object.entries((argument)).filter(([localValue_7]) => {
-          return localValue_7 !== ("prompt_cache_breakpoint");
+          return localValue_7 !== "prompt_cache_breakpoint";
         }
         ).map(([localValue_7, localValue_8]) => {
           return [localValue_7, (0, helperFunction_20)(localValue_8)];
@@ -5637,7 +5720,7 @@
         ;
       }
       function helperFunction_22(argument) {
-        if (! argument || typeof argument !== "object" || Array.isArray(argument) || typeof argument.effort !== "string") return null;
+        if (! argument || typeof argument !== "object" || Array.isArray(argument) || typeof argument.effort !== "string") return (void 0);
         const settingsRecord_5 = {
           effort: argument.effort
         }
@@ -5669,7 +5752,7 @@
         ;
       }
       function helperFunction_24(argument, localValue_7 = textValue_2) {
-        const localValue_8 = ((typeof localValue_7) === "string") || (localValue_7 === null) ? helperFunction_15(localValue_7): helperFunction_15(localValue_7.id);
+        const localValue_8 = ((typeof localValue_7) === "string") || (localValue_7 === (void 0)) ? helperFunction_15(localValue_7): helperFunction_15(localValue_7.id);
         if (! argument || ((typeof argument) !== "object") || Array.isArray(argument) || argument.type !== "function" || typeof argument.name !== "string") return argument;
         if (localValue_8.requestDialect !== "openai-chat-completions") return argument;
         const settingsRecord_5 = {
@@ -5688,7 +5771,7 @@
       }
       ) {
         if (! argument || ((typeof argument) !== "object")) throw new TypeError("A Responses request object is required.");
-        const localValue_8 = typeof localValue_7 === "string" || localValue_7 === null ? helperFunction_15(localValue_7): helperFunction_15(localValue_7.id);
+        const localValue_8 = typeof localValue_7 === "string" || localValue_7 === (void 0) ? helperFunction_15(localValue_7): helperFunction_15(localValue_7.id);
         if (! ["implicit", "explicit"].includes(compatibleCacheMode)) throw new RuntimeClass("Unsupported compatible cache mode: " + compatibleCacheMode + ".", {
           code: "invalid_provider_setting"
         }
@@ -5829,7 +5912,7 @@
       = {
       }
       ) {
-        const localValue_7 = ((typeof argument) === "string") || argument === null ? helperFunction_15(argument): helperFunction_15(argument.id);
+        const localValue_7 = ((typeof argument) === "string") || argument === (void 0) ? helperFunction_15(argument): helperFunction_15(argument.id);
         if (localValue_7.transport !== "http") throw new RuntimeClass("" + localValue_7.label + " does not use HTTP Gateway headers.", {
           code: "unsupported_gateway_transport"
         }
@@ -5870,7 +5953,7 @@
         if (localValue_7) {
           const localValue_9 = helperFunction_15(typeof localValue_7 === "string" ? localValue_7: localValue_7.id);
           if ((localValue_9.endpointPlaceholders ?? []).some(argument_2 => {
-            return localValue_8.href.includes((("{" + argument_2) + ("}"))) || localValue_8.href.includes(encodeURIComponent((("{") + (argument_2)) + "}"));
+            return localValue_8.href.includes((("{" + argument_2) + "}")) || localValue_8.href.includes(encodeURIComponent(("{" + argument_2) + "}"));
           }
           )) throw new RuntimeClass(("" + localValue_9.label) + " endpoint requires your account/project identifiers.", {
             code: "invalid_gateway_endpoint"
@@ -6549,7 +6632,7 @@
           return ["text", "input_text", "output_text"].includes(argument_2?.type);
         }
         ).map((argument_2) => {
-          return ((typeof (argument_2).text) === ("string")) ? (argument_2).text: "";
+          return ((typeof (argument_2).text) === "string") ? (argument_2).text: "";
         }
         ).join("");
       }
@@ -6590,7 +6673,7 @@
           ;
         }
         ), outputItems = [];
-        (text.length > 0 || reasoningText.length > 0 || (providerOutput !== null)) && outputItems.push({
+        (text.length > 0 || reasoningText.length > 0 || (providerOutput !== (void 0))) && outputItems.push({
           type: "message",
           role: "assistant",
           content: text.length > 0 ? [{
@@ -6604,7 +6687,7 @@
           : {
           }
           ,
-          ... providerOutput === null ? {
+          ... providerOutput === (void 0) ? {
           }
           : {
             provider_output: providerOutput
@@ -6629,7 +6712,7 @@
           incompleteDetails: (status === "incomplete") && incompleteReason ? {
             reason: incompleteReason
           }
-          : null,
+          : (void 0),
           terminalEventReceived: terminalEventReceived,
           outputItems: outputItems,
           providerMetadata: providerMetadata,
@@ -6892,7 +6975,7 @@
         }
         (argument_2)?.fields?.truncation?.support === "unsupported" && delete localValue_12.truncation;
         (argument_2)?.fields?.sampling?.support === "unsupported" && (void (delete localValue_12.temperature, delete localValue_12.top_p, delete localValue_12.top_logprobs, delete localValue_12.logprobs), Array.isArray(localValue_12.include) && (localValue_12.include = localValue_12.include.filter(argument_3 => {
-          return argument_3 !== ("message.output_text.logprobs");
+          return argument_3 !== "message.output_text.logprobs";
         }
         )));
         if (helperFunction_14(localValue_12.reasoning)) {
@@ -6904,11 +6987,11 @@
           (((argument_2)?.fields?.reasoningSummary?.support) === "unsupported") && delete localValue_14.summary;
           (((argument_2)?.fields?.reasoningMode?.support) === "unsupported") && delete localValue_14.mode;
           (((argument_2)?.fields?.reasoningContext?.support) === "unsupported") && delete localValue_14.context;
-          if (localValue_14.effort !== null) {
+          if (localValue_14.effort !== (void 0)) {
             const localValue_15 = providerParameterCapabilities_e3((argument_2), "reasoningEffort", localValue_14.effort);
             localValue_15 === null ? delete localValue_14.effort: localValue_14.effort = localValue_15;
           }
-          if (localValue_14.summary !== null && (argument_2)?.fields?.reasoningSummary?.mapping === "reasoning.summary") {
+          if (localValue_14.summary !== (void 0) && (argument_2)?.fields?.reasoningSummary?.mapping === "reasoning.summary") {
             const localValue_15 = providerParameterCapabilities_e3((argument_2), "reasoningSummary", localValue_14.summary);
             localValue_15 === null ? delete localValue_14.summary: localValue_14.summary = localValue_15;
           }
@@ -7162,7 +7245,7 @@
         ), settingsRecord_6;
       }
       function helperFunction_43(argument) {
-        if (! (0, helperFunction_14)(argument)) return null;
+        if (! (0, helperFunction_14)(argument)) return (void 0);
         return helperFunction_18({
           input: argument.input_tokens,
           output: argument.output_tokens,
@@ -7455,7 +7538,7 @@
             : {
             }
             ,
-            ... argument.tool_choice !== null ? {
+            ... argument.tool_choice !== (void 0) ? {
               tool_choice: (0, helperFunction_47)(argument.tool_choice)
             }
             : {
@@ -7491,7 +7574,7 @@
         )), settingsRecord_5;
       }
       function helperFunction_52(argument) {
-        if (! helperFunction_14((argument))) return null;
+        if (! helperFunction_14((argument))) return (void 0);
         return helperFunction_18({
           input: (argument).total_input_tokens,
           output: (argument).total_output_tokens,
@@ -7911,7 +7994,7 @@
         return settingsRecord_5;
       }
       function helperFunction_60(argument) {
-        if (! helperFunction_14((argument))) return null;
+        if (! helperFunction_14((argument))) return (void 0);
         return helperFunction_18({
           input: (argument).promptTokenCount,
           output: (argument).candidatesTokenCount,
@@ -8009,8 +8092,8 @@
             const localValue_14 = chatCompletions_e0({
               ... argument,
               input: [localValue_13],
-              tools: null,
-              tool_choice: null
+              tools: (void 0),
+              tool_choice: (void 0)
             }
             , {
               compatibleParameterMode: "extended",
@@ -8087,7 +8170,7 @@
           parameterContract: parameterContract
         }
         );
-        ! Array.isArray(argument.messages) && (localValue_13.messages = (0, helperFunction_65)(argument, tokenLimitField_2, localValue_12, (argument_2.id === "copilot-chat") ? "copilot": null));
+        ! Array.isArray(argument.messages) && (localValue_13.messages = (0, helperFunction_65)(argument, tokenLimitField_2, localValue_12, (argument_2.id === "copilot-chat") ? "copilot": (void 0)));
         const localValue_14 = ((parameterContract?.fields?.serviceTier?.support) !== "unsupported"), localValue_15 = parameterContract?.fields?.verbosity?.support !== "unsupported", localValue_16 = parameterContract?.fields?.cache?.mapping ?? "omit", localValue_17 = ["responses-cache-fields", "openrouter-prompt-cache-fields", "openrouter-anthropic-cache", "openrouter-google-cache", "openrouter-key-only-cache", "key-only-hint", "copilot-chat-cache-control", "openrouter-generic-cache"].includes(localValue_16), localValue_18 = ["responses-cache-fields", "openrouter-prompt-cache-fields", "openrouter-generic-cache"].includes(localValue_16), localValue_19 = ["responses-cache-fields", "openrouter-prompt-cache-fields", "openrouter-anthropic-cache", "openrouter-google-cache", "openrouter-generic-cache"].includes(localValue_16);
         ! localValue_15 && delete localValue_13.verbosity;
         (! localValue_14 || parameterContract?.fields?.serviceTier?.mapping === "vertex-service-tier-headers") && delete localValue_13.service_tier;
@@ -8238,7 +8321,7 @@
           }
           ;
           return helperFunction_68(argument, settingsRecord_5, (argument_2) => {
-            return (argument_2)?.type === ("web_search");
+            return (argument_2)?.type === "web_search";
           }
           );
         }
@@ -8260,7 +8343,7 @@
           }
           ;
           return (0, helperFunction_68)(argument, settingsRecord_5, (argument_2) => {
-            return (argument_2)?.type === ("google_search");
+            return (argument_2)?.type === "google_search";
           }
           );
         }
@@ -8308,7 +8391,7 @@
       }
       function helperFunction_73(argument, argument_2) {
         ;
-        if ((argument_2) === null || ((argument_2) === null)) return (argument);
+        if ((argument_2) === (void 0) || ((argument_2) === null)) return (argument);
         if (! helperFunction_14((argument_2))) throw new TypeError("Custom request headers must be an object.");
         const settingsRecord_5 = {
           ... (argument)
@@ -9046,7 +9129,7 @@
           const localValue_12 = helperFunction_24(argument_2.properties) ? argument_2.properties: {
           }
           ;
-          for (const localValue_13 of argument_2.required ?? []) if (! Object.hasOwn(argument, localValue_13)) throw helperFunction_53("required_field_missing", (("" + localValue_11) + ".") + localValue_13, "required", null, ("" + localValue_11) + "." + localValue_13 + " is required.");
+          for (const localValue_13 of argument_2.required ?? []) if (! Object.hasOwn(argument, localValue_13)) throw helperFunction_53("required_field_missing", (("" + localValue_11) + ".") + localValue_13, "required", (void 0), ("" + localValue_11) + "." + localValue_13 + " is required.");
           if (argument_2.additionalProperties === false) {
             for (const localValue_13 of Object.keys(argument)) if (! Object.hasOwn(localValue_12, localValue_13)) throw helperFunction_53("additional_field_not_allowed", localValue_11, "no_additional_fields", argument, ("" + localValue_11) + " contains an additional field.");
           }
@@ -9058,7 +9141,7 @@
           if (argument.length < (argument_2.minItems ?? 0)) throw helperFunction_53("array_too_short", localValue_11, "minimum:" + (argument_2.minItems ?? 0), argument, ("" + localValue_11) + " contains too few items.");
           if (argument.length > (argument_2.maxItems ?? Number.POSITIVE_INFINITY)) throw helperFunction_53("array_too_long", localValue_11, ("maximum:" + argument_2.maxItems), argument, (("" + localValue_11) + " contains too many items."));
           argument.forEach((argument_3, argument_4) => {
-            return helperFunction_55((argument_3), argument_2.items, (("") + (localValue_11)) + "[" + (argument_4) + "]");
+            return helperFunction_55((argument_3), argument_2.items, ("" + localValue_11) + "[" + (argument_4) + "]");
           }
           );
           return;
@@ -9386,7 +9469,7 @@
           return helperFunction_75((argument_2));
         }
         ).filter(argument_2 => {
-          return (argument_2 !== null);
+          return (argument_2 !== (void 0));
         }
         ).filter(argument_2 => {
           return ! Array.isArray(argument_2) || (argument_2.length > 0);
@@ -9397,7 +9480,7 @@
             return [localValue_12, helperFunction_75(localValue_13)];
           }
           ).filter(([, localValue_12]) => {
-            return localValue_12 !== null;
+            return localValue_12 !== (void 0);
           }
           ).filter(([, localValue_12]) => {
             return ! Array.isArray(localValue_12) || localValue_12.length > 0;
@@ -9406,9 +9489,9 @@
             return ! helperFunction_24(localValue_12) || (Object.keys(localValue_12).length > 0);
           }
           );
-          return (localValue_11.length > 0) ? Object.fromEntries(localValue_11): null;
+          return (localValue_11.length > 0) ? Object.fromEntries(localValue_11): (void 0);
         }
-        if (typeof (argument) === "string" && (argument).length === 0) return null;
+        if (typeof (argument) === "string" && (argument).length === 0) return (void 0);
         return (argument);
       }
       function helperFunction_76(argument, argument_2, argument_3) {
@@ -9713,7 +9796,7 @@
       }
       function helperFunction_30({
         executeModel: executeModel, prepareExecution: prepareExecution = async() => {
-          return null;
+          return (void 0);
         }
         , maximumEntries: maximumEntries = 16
       }
@@ -9900,7 +9983,7 @@
                   }
                   )
                 }
-                , signal, localValue_8, null, localValue_9), localValue_12 = (0, helperFunction_25)(localValue_11, submissionTool_2, "draft-edit"), provenance = {
+                , signal, localValue_8, (void 0), localValue_9), localValue_12 = (0, helperFunction_25)(localValue_11, submissionTool_2, "draft-edit"), provenance = {
                   revision: revision,
                   ... settingsRecord_5,
                   models: [helperFunction_21(localValue_11, editorProfileId, "draft-edit")]
@@ -9939,7 +10022,7 @@
                   }
                   )
                 }
-                , signal, localValue_8, null, localValue_9);
+                , signal, localValue_8, (void 0), localValue_9);
                 provenance.models.push(helperFunction_21(localValue_13, criticProfileId, "draft-critic"));
                 const localValue_14 = helperFunction_25(localValue_13, submissionTool_3, "draft-critic");
                 if (localValue_14.status !== "completed") return {
@@ -10134,7 +10217,7 @@
         const lookupMap = new Map(), helperFunction_18 = () => {
           while (lookupMap.size > numericValue_4) {
             const localValue_6 = lookupMap.keys().next().value;
-            if ((localValue_6 === null)) return;
+            if ((localValue_6 === (void 0))) return;
             lookupMap.delete (localValue_6);
           }
         }
@@ -10555,11 +10638,11 @@
       }
       ) {
         const parsedUrl = new URL(argument);
-        for (const [localValue_8, localValue_9] of Object.entries(localValue_7)) localValue_9 !== null && localValue_9 !== null && localValue_9 !== "" && parsedUrl.searchParams.set(localValue_8, (0, String)(localValue_9));
+        for (const [localValue_8, localValue_9] of Object.entries(localValue_7)) localValue_9 !== (void 0) && localValue_9 !== null && localValue_9 !== "" && parsedUrl.searchParams.set(localValue_8, (0, String)(localValue_9));
         return parsedUrl.toString();
       }
       function helperFunction_16(argument) {
-        return (argument) !== null && (argument) !== null;
+        return (argument) !== (void 0) && (argument) !== null;
       }
       function helperFunction_17(argument) {
         if (argument === true) return "supported";
@@ -10590,7 +10673,7 @@
           return argument_3 === false;
         }
         )) return false;
-        return null;
+        return (void 0);
       }
       function helperFunction_21({
         gatewayProfileId: gatewayProfileId, endpoint: localValue_7, model: model
@@ -10690,13 +10773,13 @@
       }
       function helperFunction_15(... argumentState) {
         return argumentState.find(argument => {
-          return argument !== null && argument !== null;
+          return argument !== (void 0) && argument !== null;
         }
         );
       }
       function helperFunction_16(... argumentState) {
         const localValue_6 = helperFunction_15(... argumentState);
-        return typeof localValue_6 === "boolean" ? localValue_6: null;
+        return typeof localValue_6 === "boolean" ? localValue_6: (void 0);
       }
       function helperFunction_17(localValue_6 = []) {
         return [... new Set(localValue_6.flatMap((argument) => {
@@ -10749,13 +10832,13 @@
           return helperFunction_21((argument_3)?.prompt);
         }
         ).filter((argument_3) => {
-          return ((argument_3)) !== (null);
+          return (argument_3) !== null;
         }
         ), localValue_7 = items.map(argument_3 => {
           return helperFunction_21(argument_3?.completion);
         }
         ).filter((argument_3) => {
-          return ((argument_3)) !== (null);
+          return (argument_3) !== null;
         }
         );
         if (localValue_6.some((argument_3) => {
@@ -10818,18 +10901,18 @@
           );
           if (localValue_8.includes(true)) return true;
           if (localValue_8.length > 0 && localValue_8.every((argument_4) => {
-            return ((argument_4)) === (false);
+            return (argument_4) === false;
           }
           )) return false;
-          return null;
+          return (void 0);
         }
         const supports = localValue_6.supports && typeof localValue_6.supports === "object" && ! Array.isArray(localValue_6.supports) ? Object.freeze({
           ... localValue_6.supports
         }
-        ): null, limits = localValue_6.limits && typeof localValue_6.limits === "object" && ! Array.isArray(localValue_6.limits) ? Object.freeze({
+        ): (void 0), limits = localValue_6.limits && typeof localValue_6.limits === "object" && ! Array.isArray(localValue_6.limits) ? Object.freeze({
           ... localValue_6.limits
         }
-        ): null;
+        ): (void 0);
         return Object.freeze({
           streaming: helperFunction_35("streaming", (argument)?.streaming),
           vision: helperFunction_35("vision", (argument)?.vision),
@@ -10838,13 +10921,13 @@
           reasoning: (0, helperFunction_35)("reasoning", (argument)?.reasoning),
           implicitCaching: helperFunction_35("implicitCaching", (argument)?.supports_implicit_caching),
           cancellation: helperFunction_35("cancellation", (argument)?.cancellation),
-          ... supports !== null ? {
+          ... supports !== (void 0) ? {
             supports: supports
           }
           : {
           }
           ,
-          ... limits !== null ? {
+          ... limits !== (void 0) ? {
             limits: limits
           }
           : {
@@ -10855,7 +10938,7 @@
       function helperFunction_27(argument) {
         if (! Object.hasOwn((argument) ?? {
         }
-        , "supported_endpoints")) return null;
+        , "supported_endpoints")) return (void 0);
         return Object.freeze(helperFunction_17((argument).supported_endpoints));
       }
       function helperFunction_28(argument, argument_2) {
@@ -10881,7 +10964,7 @@
           reasoningEfforts: helperFunction_17(helperFunction_15((argument)?.reasoning_efforts, (argument)?.reasoningEfforts, [])),
           serviceTiers: helperFunction_17((0, helperFunction_15)((argument)?.service_tiers, (argument)?.serviceTiers, [])),
           supportedParameters: helperFunction_17((0, helperFunction_15)((argument)?.supported_parameters, (argument)?.supportedParameters, [])),
-          ... (0, helperFunction_27)((argument)) !== null ? {
+          ... (0, helperFunction_27)((argument)) !== (void 0) ? {
             supportedEndpoints: helperFunction_27((argument))
           }
           : {
@@ -10916,7 +10999,7 @@
         }
         );
         if ((argument_2).clientProfile) {
-          const preferredDialect = (argument_2).preferredDialect, supportedEndpoints = model.supportedEndpoints, localValue_9 = supportedEndpoints === null ? null: supportedEndpoints.map(copilotConnection_e2).filter(Boolean), localValue_10 = [preferredDialect, "responses", "chat-completions", "anthropic-messages"].filter(Boolean), dialect = localValue_10.find(argument_3 => {
+          const preferredDialect = (argument_2).preferredDialect, supportedEndpoints = model.supportedEndpoints, localValue_9 = supportedEndpoints === (void 0) ? null: supportedEndpoints.map(copilotConnection_e2).filter(Boolean), localValue_10 = [preferredDialect, "responses", "chat-completions", "anthropic-messages"].filter(Boolean), dialect = localValue_10.find(argument_3 => {
             return (localValue_9 === null || localValue_9.includes(argument_3)) && ! (((argument_2).clientProfile === "cli") && argument_3 === "anthropic-messages");
           }
           );
@@ -11163,7 +11246,7 @@
         = {
         }
         ) {
-          const localValue_7 = await this.callSingle("status", null, {
+          const localValue_7 = await this.callSingle("status", (void 0), {
             signal: signal,
             timeoutMs: timeoutMs_2,
             acceptedTypes: ["status"]
@@ -11177,7 +11260,7 @@
         = {
         }
         ) {
-          const localValue_7 = await this.callSingle("listModels", null, {
+          const localValue_7 = await this.callSingle("listModels", (void 0), {
             signal: signal,
             timeoutMs: timeoutMs_2,
             acceptedTypes: ["models"]
@@ -11343,7 +11426,7 @@
           await this.Risuai.postPluginChannelMessage(textValue_2, textValue_3, {
             id: argument,
             "op": op,
-            ... payload === null ? {
+            ... payload === (void 0) ? {
             }
             : {
               payload: payload
@@ -11432,7 +11515,7 @@
           );
           if (localValue_8) return localValue_8.name;
         }
-        return null;
+        return (void 0);
       }
       function helperFunction_23(argument) {
         ;
@@ -11549,8 +11632,8 @@
           turn: turn
         }
         ;
-        return (argument.temperature !== null) && (settingsRecord_4.temperature = argument.temperature), argument.top_p !== null && (settingsRecord_4.top_p = argument.top_p), localValue_7.length > 0 && (settingsRecord_4.tools = localValue_7), Object.fromEntries(Object.entries(settingsRecord_4).filter(([, localValue_8]) => {
-          return localValue_8 !== null;
+        return (argument.temperature !== (void 0)) && (settingsRecord_4.temperature = argument.temperature), argument.top_p !== (void 0) && (settingsRecord_4.top_p = argument.top_p), localValue_7.length > 0 && (settingsRecord_4.tools = localValue_7), Object.fromEntries(Object.entries(settingsRecord_4).filter(([, localValue_8]) => {
+          return localValue_8 !== (void 0);
         }
         ));
       }
@@ -11771,7 +11854,7 @@
           reasoningSummary: reasoningSummary,
           reasoningText: "",
           toolCalls: toolCalls,
-          usage: (0, helperFunction_14)(localValue_9.usage) ? localValue_9.usage: null,
+          usage: (0, helperFunction_14)(localValue_9.usage) ? localValue_9.usage: (void 0),
           status: "completed",
           terminalEventReceived: true,
           outputItems: (0, helperFunction_27)(text, toolCalls)
@@ -12037,7 +12120,7 @@
       }
       function helperFunction_15(... argumentState_2) {
         return argumentState_2.find(argument => {
-          return argument !== null;
+          return argument !== (void 0);
         }
         );
       }
@@ -12093,7 +12176,7 @@
           }
         }
         ;
-        return localValue_16 && settingsRecord_5.semanticEvidence === null && settingsRecord_5.semantic_evidence === null && (settingsRecord_5.semanticEvidence = semanticEvidence), void (localValue_19.workloadAssignments = settingsRecord_5, delete localValue_19.workload_assignments), localValue_19;
+        return localValue_16 && settingsRecord_5.semanticEvidence === (void 0) && settingsRecord_5.semantic_evidence === (void 0) && (settingsRecord_5.semanticEvidence = semanticEvidence), void (localValue_19.workloadAssignments = settingsRecord_5, delete localValue_19.workload_assignments), localValue_19;
       }
       function helperFunction_19(argument) {
         return ((typeof (argument)) === "string") ? (argument).trim(): "";
@@ -12105,13 +12188,13 @@
         minimum: minimum, maximum: maximum, label: label
       }
       ) {
-        if (argument === null || argument === null || (argument === "")) return argument_2;
+        if (argument === (void 0) || argument === null || (argument === "")) return argument_2;
         const localValue_15 = ((typeof argument) === "number") ? argument: Number((0, String)(argument));
         if (! Number.isFinite(localValue_15) || localValue_15 < minimum || (localValue_15 > maximum)) throw new argumentState[222]("" + label + " must be a finite number from " + minimum + " to " + maximum + ".");
         return localValue_15;
       }
       function helperFunction_22(argument) {
-        if ((argument === null)) return localValue_9.maxOutputTokensOverride;
+        if ((argument === (void 0))) return localValue_9.maxOutputTokensOverride;
         if (argument === null || argument === "") return null;
         const localValue_15 = typeof argument === "number" ? argument: Number.parseInt((0, String)(argument), 10);
         if (! Number.isInteger(localValue_15) || localValue_15 < 1 || localValue_15 > 128000) throw new argumentState[222]("maxOutputTokensOverride must be an integer from 1 to 128000.");
@@ -12119,7 +12202,7 @@
       }
       function helperFunction_23(argument) {
         const localValue_15 = helperFunction_15((argument).cache_mode, (argument).cacheMode);
-        if (localValue_15 !== null) return localValue_15;
+        if (localValue_15 !== (void 0)) return localValue_15;
         const localValue_16 = helperFunction_15((argument).explicit_cache_enabled, (argument).explicitCacheEnabled);
         if (localValue_16 === false) return "implicit";
         if (localValue_16 === true) return "explicit";
@@ -12369,7 +12452,7 @@
         ;
       }
       function helperFunction_35(argument) {
-        if (argument === null || (argument === null)) return [];
+        if (argument === (void 0) || (argument === null)) return [];
         if (! Array.isArray(argument) || argument.length > 8) throw new argumentState[222]("additionalMcpServers must be an array with at most 8 entries.");
         const uniqueValues_2 = new Set(), uniqueValues_3 = new Set(["openai"]);
         return argument.map((argument_2, argument_3) => {
@@ -12393,7 +12476,7 @@
           if (textValue_3 && ! ["http:", "https:"].includes(textValue_3.protocol)) throw new argumentState[222](("additionalMcpServers[" + argument_3) + "].endpoint must use HTTP or HTTPS.");
           if (textValue_3 && kind === "remote" && (textValue_3.protocol !== "https:")) throw new argumentState[222]("additionalMcpServers[" + argument_3 + "] remote endpoints must use HTTPS.");
           if (textValue_3 && (kind === "local") && ! ["localhost", "127.0.0.1", "[::1]"].includes(textValue_3.hostname.toLowerCase())) throw new argumentState[222](("additionalMcpServers[" + argument_3) + "] local endpoints must use localhost, 127.0.0.1, or ::1.");
-          const bearerToken = (argument_2.bearerToken === null) || argument_2.bearerToken === null ? "": String(argument_2.bearerToken).trim();
+          const bearerToken = (argument_2.bearerToken === (void 0)) || argument_2.bearerToken === null ? "": String(argument_2.bearerToken).trim();
           if (new RegExp("[\\r\\n]", "").test(bearerToken)) throw new argumentState[222]("additionalMcpServers[" + argument_3 + "].bearerToken must not contain line breaks.");
           return {
             id: localValue_15,
@@ -12414,19 +12497,19 @@
         return localValue_15;
       }
       function helperFunction_37(argument) {
-        if ((argument) === null) return 0;
+        if ((argument) === (void 0)) return 0;
         if (! Number.isSafeInteger((argument)) || ((argument) < 0)) throw new argumentState[222]("Invalid Vertex credential revision.");
         return (argument);
       }
       function helperFunction_38(argument) {
-        if (((argument) === null) || (argument) === null || (argument) === "") return localValue_9.maximumToolRounds;
+        if (((argument) === (void 0)) || (argument) === null || (argument) === "") return localValue_9.maximumToolRounds;
         const localValue_15 = typeof (argument) === "number" ? (argument): Number.parseInt(String((argument)), 10);
         if (localValue_15 === 0) return localValue_9.maximumToolRounds;
         if (! Number.isInteger(localValue_15) || localValue_15 < 1 || (localValue_15 > 16)) throw new argumentState[222]("maximumToolRounds must be an integer from 1 to 16.");
         return localValue_15;
       }
       function helperFunction_39(argument) {
-        if (((argument) === null) || (argument) === null || (argument) === "") return localValue_9.requestTimeoutMinutes;
+        if (((argument) === (void 0)) || (argument) === null || (argument) === "") return localValue_9.requestTimeoutMinutes;
         const localValue_15 = ((typeof (argument)) === "number") ? (argument): Number.parseInt(String((argument)), 10);
         if (! Number.isInteger(localValue_15) || (localValue_15 < 1) || localValue_15 > 60) throw new argumentState[222]("requestTimeoutMinutes must be an integer from 1 to 60.");
         return localValue_15;
@@ -12435,7 +12518,7 @@
         return 0;
       }
       function helperFunction_41(argument) {
-        if ((argument === null) || argument === null || argument === "") return localValue_9.floatingStatusOpacity;
+        if ((argument === (void 0)) || argument === null || argument === "") return localValue_9.floatingStatusOpacity;
         const localValue_15 = typeof argument === "number" ? argument: Number.parseInt((0, String)(argument), 10);
         if (! Number.isInteger(localValue_15) || localValue_15 < 40 || (localValue_15 > 100)) throw new argumentState[222]("floatingStatusOpacity must be an integer from 40 to 100.");
         return localValue_15;
@@ -12471,7 +12554,7 @@
       }
       function helperFunction_47(argument, argument_2) {
         if (argument.transport === "copilot-manager") return "";
-        const localValue_15 = argument_2 === null || argument_2 === null ? "": (0, String)(argument_2).trim();
+        const localValue_15 = argument_2 === (void 0) || argument_2 === null ? "": (0, String)(argument_2).trim();
         if (new RegExp("[\\r\\n]", "").test(localValue_15)) throw new argumentState[222]("CORS transport proxy token must not contain line breaks.");
         return localValue_15;
       }
@@ -12482,7 +12565,7 @@
       const uniqueValues = new Set(["accept", "anthropic-version", "authorization", "connection", "content-length", "content-type", "cookie", "host", "keep-alive", "proxy-authenticate", "proxy-authorization", "set-cookie", "te", "trailer", "transfer-encoding", "upgrade", "x-api-key", "x-goog-api-key", "x-proxy-token", "x-target-url"]);
       function helperFunction_49(argument) {
         ;
-        if ((argument) === null || (argument) === null) return {
+        if ((argument) === (void 0) || (argument) === null) return {
         }
         ;
         if (! helperFunction_17((argument))) throw new argumentState[222]("customHeaders must be an object.");
@@ -12494,7 +12577,7 @@
         for (const [localValue_16, localValue_17] of localValue_15) {
           const localValue_18 = String(localValue_16).trim(), localValue_19 = localValue_18.toLowerCase();
           if (! new RegExp("^[!#$%&'*+.^_`|~0-9A-Za-z-]{1,128}$", "").test(localValue_18) || uniqueValues.has(localValue_19) || uniqueValues_2.has(localValue_19)) throw new argumentState[222]("customHeaders contains an unsupported or duplicated name: " + (localValue_18 || "(empty)") + ".");
-          const localValue_20 = localValue_17 === null || localValue_17 === null ? "": (0, String)(localValue_17).trim();
+          const localValue_20 = localValue_17 === (void 0) || localValue_17 === null ? "": (0, String)(localValue_17).trim();
           if ((localValue_20.length > 4096) || new RegExp("[\\r\\n\\u0000]", "").test(localValue_20)) throw new argumentState[222]("customHeaders." + localValue_18 + " must be a single line of at most 4096 characters.");
           void (uniqueValues_2.add(localValue_19), settingsRecord_5[localValue_18] = localValue_20);
         }
@@ -12519,7 +12602,7 @@
       function helperFunction_51(argument) {
         void 0;
         return Object.entries(helperFunction_49(argument)).map(([localValue_15, localValue_16]) => {
-          return (((("") + (localValue_15)) + ": ") + (localValue_16));
+          return ((("" + localValue_15) + ": ") + localValue_16);
         }
         ).join("\n");
       }
@@ -12549,7 +12632,7 @@
           }
           ;
           return [argument_3.id, Object.fromEntries((argument_2).filter(argument_4 => {
-            return localValue_16[argument_4] !== null;
+            return localValue_16[argument_4] !== (void 0);
           }
           ).map(argument_4 => {
             return [argument_4, localValue_16[argument_4]];
@@ -12589,7 +12672,7 @@
         return (items.length === 0) && (argument_2)[0] && items.push((argument_2)[0].id), items;
       }
       function helperFunction_61(argument, argument_2, argument_3) {
-        const localValue_15 = (argument) === null ? {
+        const localValue_15 = (argument) === (void 0) ? {
         }
         : (argument);
         if (! localValue_15 || typeof localValue_15 !== "object" || Array.isArray(localValue_15)) throw new argumentState[222]("accountAdapterIds must be an object.");
@@ -12609,7 +12692,7 @@
         return settingsRecord_5;
       }
       function helperFunction_62(argument, argument_2, argument_3) {
-        const localValue_15 = argument === null ? {
+        const localValue_15 = argument === (void 0) ? {
         }
         : argument;
         if (! localValue_15 || typeof localValue_15 !== "object" || Array.isArray(localValue_15)) throw new argumentState[222]("copilotModelMetadata must be an object.");
@@ -12649,7 +12732,7 @@
       function helperFunction_63(argument, argument_2) {
         ;
         const localValue_15 = (argument)?.accountAdapterIds?.[(argument_2)?.id];
-        if ((localValue_15 === null)) return (argument_2)?.adapterId;
+        if ((localValue_15 === (void 0))) return (argument_2)?.adapterId;
         const localValue_16 = nativeAdapters_ed(localValue_15, (argument_2).gatewayProfileId);
         if (! (0, nativeAdapters_ec)(localValue_16, (argument_2).gatewayProfileId)) throw new argumentState[222]("accountAdapterIds." + (argument_2).id + " " + localValue_16 + " is not compatible with gatewayProfileId " + (argument_2).gatewayProfileId + ".");
         return localValue_16;
@@ -12691,10 +12774,10 @@
             }
           }
           , localValue_18 = Object.fromEntries(argument_2.filter(argument_5 => {
-            return localValue_16[argument_5] !== null;
+            return localValue_16[argument_5] !== (void 0);
           }
           ).filter(argument_5 => {
-            return argument_5 !== "copilot" || localValue_15.id === ("github-copilot-direct") || JSON.stringify(localValue_16[argument_5]) !== JSON.stringify(localValue_17[argument_5]);
+            return argument_5 !== "copilot" || localValue_15.id === "github-copilot-direct" || JSON.stringify(localValue_16[argument_5]) !== JSON.stringify(localValue_17[argument_5]);
           }
           ).map((argument_5) => {
             return [(argument_5), helperFunction_16(localValue_16[(argument_5)])];
@@ -12730,7 +12813,7 @@
           credentials: Object.fromEntries(Object.entries(argument.credentials ?? {
           }
           ).filter(([localValue_16, localValue_17]) => {
-            return localValue_16 === localValue_15.apiKeyArgument || localValue_17 !== "" && ((localValue_17) !== (null));
+            return localValue_16 === localValue_15.apiKeyArgument || localValue_17 !== "" && (localValue_17 !== null);
           }
           ).map(([localValue_16, localValue_17]) => {
             return [localValue_16, (0, helperFunction_16)(localValue_17)];
@@ -12884,7 +12967,7 @@
             ... helperFunction_17((argument_2).adapterContractIds) ? (argument_2).adapterContractIds: {
             }
           }
-          , localValue_21 = localValue_20 ? (0, nativeAdapters_e8)("copilot-chat", localValue_20): null;
+          , localValue_21 = localValue_20 ? (0, nativeAdapters_e8)("copilot-chat", localValue_20): (void 0);
           void (localValue_21 ? settingsRecord_7["copilot-chat"] = localValue_21: delete settingsRecord_7["copilot-chat"], (argument_2).accountAdapterIds = settingsRecord_5, (argument_2).adapterModelIds = settingsRecord_6, (argument_2).adapterContractIds = settingsRecord_7, delete (argument_2).account_adapter_ids, delete (argument_2).adapter_model_ids, delete (argument_2).adapter_contract_ids);
         }
         ;
@@ -12908,7 +12991,7 @@
         }
         ) => {
           const localValue_16 = helperFunction_19(argument_2) || argument_3;
-          if (localValue_16 !== "primary" && ! (allowDisabled && localValue_16 === "disabled") && ! new RegExp(("^[a-z0-9][a-z0-9._-]{0,39}$"), "").test(localValue_16)) throw new argumentState[222]("workloadAssignments values must reference primary or a registered model profile ID.");
+          if (localValue_16 !== "primary" && ! (allowDisabled && localValue_16 === "disabled") && ! new RegExp("^[a-z0-9][a-z0-9._-]{0,39}$", "").test(localValue_16)) throw new argumentState[222]("workloadAssignments values must reference primary or a registered model profile ID.");
           return localValue_16;
         }
         ;
@@ -13030,11 +13113,11 @@
             : {
             }
             ,
-            responsesEndpoint: (0, helperFunction_45)((argument), helperFunction_15(localValue_21 ? helperFunction_15(localValue_15.responses_endpoint, localValue_15.responsesEndpoint): null, localValue_20.responses_endpoint, localValue_20.responsesEndpoint)),
-            modelId: (0, helperFunction_44)((argument), (0, helperFunction_15)(localValue_21 ? helperFunction_15(localValue_15.model, localValue_15.model_id, localValue_15.modelId): null, localValue_20.model, localValue_20.model_id, localValue_20.modelId)),
-            transportProxyUrl: helperFunction_46((argument), (0, helperFunction_15)(localValue_21 ? (0, helperFunction_15)(localValue_15.transport_proxy_url, localValue_15.transportProxyUrl): null, localValue_20.transport_proxy_url, localValue_20.transportProxyUrl, localValue_20.proxyUrl)),
-            transportProxyToken: (0, helperFunction_47)((argument), (0, helperFunction_15)(localValue_21 ? helperFunction_15(localValue_15.transport_proxy_token, localValue_15.transportProxyToken): null, localValue_20.transport_proxy_token, localValue_20.transportProxyToken, localValue_20.proxyKey)),
-            transportProxyMode: helperFunction_48((argument), helperFunction_15(localValue_21 ? (0, helperFunction_15)(localValue_15.transport_proxy_mode, localValue_15.transportProxyMode): null, localValue_20.transport_proxy_mode, localValue_20.transportProxyMode, localValue_20.proxyDirect === true ? "direct": null)),
+            responsesEndpoint: (0, helperFunction_45)((argument), helperFunction_15(localValue_21 ? helperFunction_15(localValue_15.responses_endpoint, localValue_15.responsesEndpoint): (void 0), localValue_20.responses_endpoint, localValue_20.responsesEndpoint)),
+            modelId: (0, helperFunction_44)((argument), (0, helperFunction_15)(localValue_21 ? helperFunction_15(localValue_15.model, localValue_15.model_id, localValue_15.modelId): (void 0), localValue_20.model, localValue_20.model_id, localValue_20.modelId)),
+            transportProxyUrl: helperFunction_46((argument), (0, helperFunction_15)(localValue_21 ? (0, helperFunction_15)(localValue_15.transport_proxy_url, localValue_15.transportProxyUrl): (void 0), localValue_20.transport_proxy_url, localValue_20.transportProxyUrl, localValue_20.proxyUrl)),
+            transportProxyToken: (0, helperFunction_47)((argument), (0, helperFunction_15)(localValue_21 ? helperFunction_15(localValue_15.transport_proxy_token, localValue_15.transportProxyToken): (void 0), localValue_20.transport_proxy_token, localValue_20.transportProxyToken, localValue_20.proxyKey)),
+            transportProxyMode: helperFunction_48((argument), helperFunction_15(localValue_21 ? (0, helperFunction_15)(localValue_15.transport_proxy_mode, localValue_15.transportProxyMode): (void 0), localValue_20.transport_proxy_mode, localValue_20.transportProxyMode, localValue_20.proxyDirect === true ? "direct": (void 0))),
             copilot: copilotConnection_e0(localValue_20.copilot),
             customHeaders: helperFunction_49((0, helperFunction_15)(localValue_20.custom_headers, localValue_20.customHeaders)),
             compatibleParameterMode: helperFunction_52((argument), (0, helperFunction_15)(localValue_20.compatible_parameter_mode, localValue_20.compatibleParameterMode)),
@@ -13197,7 +13280,7 @@
         return settingsRecord_5;
       }
       function helperFunction_75(argument) {
-        if (argument === null || argument === null || argument === "") return helperFunction_74({
+        if (argument === null || argument === (void 0) || argument === "") return helperFunction_74({
         }
         );
         let localValue_15 = argument;
@@ -13213,14 +13296,14 @@
       function helperFunction_76(argument, localValue_15 = argument?.gatewayProfileId) {
         const localValue_16 = gatewayProfiles_e1_2(localValue_15), localValue_17 = argument?.connections?.[localValue_16.id] ?? {
         }
-        , localValue_18 = copilotConnection_e0(localValue_17.copilot), localValue_19 = localValue_16.id === "github-copilot-direct" ? argument?.copilotModelMetadata?.[argument?.activeAccountProfile?.id]: null, localValue_20 = helperFunction_19(argument?.adapterModelIds?.[argument?.adapterId] ?? localValue_17.modelId), responsesEndpoint = helperFunction_45(localValue_16, localValue_17.responsesEndpoint);
+        , localValue_18 = copilotConnection_e0(localValue_17.copilot), localValue_19 = localValue_16.id === "github-copilot-direct" ? argument?.copilotModelMetadata?.[argument?.activeAccountProfile?.id]: (void 0), localValue_20 = helperFunction_19(argument?.adapterModelIds?.[argument?.adapterId] ?? localValue_17.modelId), responsesEndpoint = helperFunction_45(localValue_16, localValue_17.responsesEndpoint);
         let textValue_3 = "", textValue_4 = "";
         try {
           void (textValue_3 = new URL(responsesEndpoint).origin, textValue_4 = new URL(localValue_19?.sourceEndpoint).origin);
         }
         catch {
         }
-        const localValue_21 = localValue_19?.clientProfile === copilotConnection_e1(localValue_18), localValue_22 = (copilotConnection_e4(localValue_18, responsesEndpoint) === "auto") || textValue_4 && textValue_4 === textValue_3, localValue_23 = localValue_19?.modelId === localValue_20 && localValue_21 && localValue_22 ? localValue_19: null;
+        const localValue_21 = localValue_19?.clientProfile === copilotConnection_e1(localValue_18), localValue_22 = (copilotConnection_e4(localValue_18, responsesEndpoint) === "auto") || textValue_4 && textValue_4 === textValue_3, localValue_23 = localValue_19?.modelId === localValue_20 && localValue_21 && localValue_22 ? localValue_19: (void 0);
         return {
           responsesEndpoint: responsesEndpoint,
           ... ["google-vertex-native", "google-vertex-chat-completions"].includes(localValue_16.id) ? {
@@ -13618,7 +13701,7 @@
         ), isCurrent = async() => {
           ;
           const localValue_16 = await localValue_15, localValue_17 = await(0, helperFunction_84)(await storage), localValue_18 = localValue_17.accounts.find((argument) => {
-            return ((argument).id) === (accountId);
+            return (argument).id === accountId;
           }
           ), localValue_19 = localValue_18?.connections[profileId];
           return ((localValue_18?.gatewayProfileId) === profileId) && ((localValue_19?.vertexCredentialKind) === "service-account") && (localValue_19.vertexCredentialRevision === localValue_16.revision) && await vertexCredentials_e3(localValue_18.credentials.google_vertex_service_account) === localValue_16.digest;
@@ -13638,7 +13721,7 @@
           }
           ,
           async["confirmBearerOwner"]() {
-            if (! await isCurrent()) throw Object.assign(new Error(("Vertex 인증 정보가 변경되었습니다. 다시 요청하세요.")), {
+            if (! await isCurrent()) throw Object.assign(new Error("Vertex 인증 정보가 변경되었습니다. 다시 요청하세요."), {
               code: "vertex_credential_changed"
             }
             );
@@ -13685,7 +13768,7 @@
         , helperFunction_95 = async() => {
           ;
           const settings = await(0, helperFunction_84)(storage), account = settings.accounts.find(argument => {
-            return ((argument.id) === (accountId));
+            return (argument.id === accountId);
           }
           ), grant = account?.credentials.copilot_oauth, localValue_21 = account?.connections["github-copilot-direct"]?.copilot;
           if (! grant || (grant.id !== localValue_15.id) || grant.clientId !== options.clientId || ((localValue_21?.clientId) !== options.clientId) || ((localValue_21?.authentication) !== options.authentication)) throw helperFunction_94();
@@ -14014,7 +14097,7 @@
               ), localValue_10 = lookupMap.get(localValue_8.id);
               for (const localValue_11 of["google-vertex-native", "google-vertex-chat-completions"]) {
                 const localValue_12 = localValue_9?.connections[localValue_11]?.vertexCredentialRevision;
-                if (localValue_12 === null) continue;
+                if (localValue_12 === (void 0)) continue;
                 localValue_10?.connections[localValue_11]?.vertexCredentialRevision === localValue_8.connections[localValue_11]?.vertexCredentialRevision && (localValue_10.connections[localValue_11].vertexCredentialRevision = localValue_12), localValue_8.connections[localValue_11].vertexCredentialRevision = localValue_12;
               }
             }
@@ -14408,7 +14491,7 @@
         localValue_16 += 1) {
           const yE = argument[localValue_16];
           if (! yE?.cachePoint) continue;
-          if (yE.cacheTtl !== null && yE[settingsRecord_3.csPEz("cacheT", "tl")] !== config.ttl) throw new RangeError(settingsRecord_3.azWKB + config.ttl + ".");
+          if (yE.cacheTtl !== (void 0) && yE[settingsRecord_3.csPEz("cacheT", "tl")] !== config.ttl) throw new RangeError(settingsRecord_3.azWKB + config.ttl + ".");
           if (! settingsRecord_3.avfkS(helperFunction_19, yE.role) || ! helperFunction_18(yE) || localValue_16 === promptEndIndex || config[settingsRecord_3.csPEz("excludeLates", "tNonSy") + "stem"] && settingsRecord_3.hyZZK(localValue_16, localValue_11)) continue;
           items.push(localValue_16);
         }
@@ -14429,7 +14512,7 @@
         ;
         if (! Array.isArray((argument)?.multimodals)) return [];
         return (argument).multimodals.filter((argument_2) => {
-          return (argument_2)?.type === "image" && typeof (argument_2).base64 === "string" && (((argument_2).base64.length) > (0));
+          return (argument_2)?.type === "image" && typeof (argument_2).base64 === "string" && ((argument_2).base64.length > 0);
         }
         ).map((argument_2) => {
           ;
@@ -14612,15 +14695,15 @@
           return Object.hasOwn((argument_2).properties, (argument_3)) && helperFunction_28((argument)[(argument_3)], (argument_2).properties[(argument_3)]);
         }
         );
-        if (localValue_9 === "array") return Array.isArray((argument)) && ((argument_2).minItems === null || ((argument).length >= (argument_2).minItems)) && (((argument_2).maxItems === null) || ((argument).length <= (argument_2).maxItems)) && (((argument_2).uniqueItems !== true) || new Set((argument).map((argument_3) => {
+        if (localValue_9 === "array") return Array.isArray((argument)) && ((argument_2).minItems === (void 0) || ((argument).length >= (argument_2).minItems)) && (((argument_2).maxItems === (void 0)) || ((argument).length <= (argument_2).maxItems)) && (((argument_2).uniqueItems !== true) || new Set((argument).map((argument_3) => {
           return (0, helperFunction_14)((argument_3));
         }
         )).size === (argument).length) && (argument).every((argument_3) => {
           return (0, helperFunction_28)((argument_3), (argument_2).items);
         }
         );
-        if (localValue_9 === "integer" || localValue_9 === "number") return typeof (argument) === "number" && Number.isFinite((argument)) && (localValue_9 !== "integer" || Number.isInteger((argument))) && ((argument_2).minimum === null || (argument) >= (argument_2).minimum) && (((argument_2).maximum === null) || (argument) <= (argument_2).maximum);
-        if (localValue_9 === "string") return typeof (argument) === "string" && (((argument_2).minLength === null) || (Array.from((argument)).length >= (argument_2).minLength)) && ((argument_2).maxLength === null || (Array.from((argument)).length <= (argument_2).maxLength));
+        if (localValue_9 === "integer" || localValue_9 === "number") return typeof (argument) === "number" && Number.isFinite((argument)) && (localValue_9 !== "integer" || Number.isInteger((argument))) && ((argument_2).minimum === (void 0) || (argument) >= (argument_2).minimum) && (((argument_2).maximum === (void 0)) || (argument) <= (argument_2).maximum);
+        if (localValue_9 === "string") return typeof (argument) === "string" && (((argument_2).minLength === (void 0)) || (Array.from((argument)).length >= (argument_2).minLength)) && ((argument_2).maxLength === (void 0) || (Array.from((argument)).length <= (argument_2).maxLength));
         return ((typeof (argument)) === localValue_9);
       }
       function helperFunction_29(argument, localValue_8 = argument.parameters) {
@@ -14653,20 +14736,20 @@
       ) {
         const localValue_8 = gatewayProfiles_e1_2(gatewayProfileId), modelId = typeof model === "string" && model.trim().length > 0 ? model.trim(): localValue_8.modelId;
         if (! Number.isInteger(maxOutputTokens) || maxOutputTokens < 1) throw new RangeError("maxOutputTokens must be a positive integer.");
-        if (temperature !== null && (((typeof temperature) !== "number") || ! Number.isFinite(temperature) || temperature < 0 || temperature > 2)) throw new RangeError("temperature must be a finite number from 0 to 2.");
-        if (topP !== null && (typeof topP !== "number" || ! Number.isFinite(topP) || topP < 0 || topP > 1)) throw new RangeError("topP must be a finite number from 0 to 1.");
-        if (reasoningMode !== null && reasoningMode !== "pro") throw new TypeError("reasoningMode must be pro when provided.");
+        if (temperature !== (void 0) && (((typeof temperature) !== "number") || ! Number.isFinite(temperature) || temperature < 0 || temperature > 2)) throw new RangeError("temperature must be a finite number from 0 to 2.");
+        if (topP !== (void 0) && (typeof topP !== "number" || ! Number.isFinite(topP) || topP < 0 || topP > 1)) throw new RangeError("topP must be a finite number from 0 to 1.");
+        if (reasoningMode !== (void 0) && reasoningMode !== "pro") throw new TypeError("reasoningMode must be pro when provided.");
         if (typeof stream !== "boolean") throw new TypeError("stream must be a boolean.");
         if (((typeof background) !== "boolean")) throw new TypeError("background must be a boolean.");
         if (settingsRecord_2.xTayL(background, ! stream)) throw new TypeError("background Responses require stream to be true.");
         if (background && (localValue_8.backgroundResponses === "none")) throw new TypeError("" + localValue_8.label + " does not support background Responses.");
-        if ((reasoningContext !== null) && ! ["auto", "all_turns", "current_turn"].includes(reasoningContext)) throw new TypeError("reasoningContext must be auto, all_turns, or current_turn.");
-        if (truncation !== null && ! ["auto", "disabled"].includes(truncation)) throw new TypeError("truncation must be auto or disabled when provided.");
+        if ((reasoningContext !== (void 0)) && ! ["auto", "all_turns", "current_turn"].includes(reasoningContext)) throw new TypeError("reasoningContext must be auto, all_turns, or current_turn.");
+        if (truncation !== (void 0) && ! ["auto", "disabled"].includes(truncation)) throw new TypeError("truncation must be auto or disabled when provided.");
         let tools_2 = helperFunction_24(tools);
         const localValue_9 = structuredOutputToolName ? tools_2.find((argument) => {
           return (argument).name === structuredOutputToolName;
         }
-        ): null, localValue_10 = localValue_9 ? (0, helperFunction_29)(localValue_9, structuredOutputSchema ?? localValue_9.parameters): null, format = localValue_10?.format;
+        ): (void 0), localValue_10 = localValue_9 ? (0, helperFunction_29)(localValue_9, structuredOutputSchema ?? localValue_9.parameters): (void 0), format = localValue_10?.format;
         format && (tools_2 = tools_2.filter((argument) => {
           return (argument) !== localValue_9;
         }
@@ -14692,7 +14775,7 @@
           routingKey: cacheRoutingKey,
           cryptoProvider: cryptoProvider
         }
-        ): null, settingsRecord_5 = {
+        ): (void 0), settingsRecord_5 = {
           model: modelId,
           input: reasoningHistory_e3(localValue_13.input, reasoningReplay),
           store: false,
@@ -14705,13 +14788,13 @@
             }
             ): reasoningEffort,
             summary: reasoningSummary,
-            ... reasoningMode === null ? {
+            ... reasoningMode === (void 0) ? {
             }
             : {
               mode: reasoningMode
             }
             ,
-            ... (reasoningContext === null) ? {
+            ... (reasoningContext === (void 0)) ? {
             }
             : {
               context: reasoningContext
@@ -14752,15 +14835,15 @@
           : {
           }
           ,
-          ... truncation === null ? {
+          ... truncation === (void 0) ? {
           }
           : {
             truncation: truncation
           }
         }
         ;
-        temperature !== null && ! modelCapabilities_e1_2(modelId) && ((parameterContract?.fields?.sampling?.support) !== "unsupported") && (settingsRecord_5.temperature = temperature);
-        topP !== null && ! modelCapabilities_e1_2(modelId) && parameterContract?.fields?.sampling?.support !== "unsupported" && (settingsRecord_5.top_p = topP);
+        temperature !== (void 0) && ! modelCapabilities_e1_2(modelId) && ((parameterContract?.fields?.sampling?.support) !== "unsupported") && (settingsRecord_5.temperature = temperature);
+        topP !== (void 0) && ! modelCapabilities_e1_2(modelId) && parameterContract?.fields?.sampling?.support !== "unsupported" && (settingsRecord_5.top_p = topP);
         localValue_13.cache.keyEnabled && ! localValue_13.cache.enabled && (settingsRecord_5.prompt_cache_key = prompt_cache_key);
         localValue_12.length > 0 && (settingsRecord_5.providerOptions = {
           gateway: {
@@ -14868,7 +14951,7 @@
         return typeof argument === "string" ? argument.slice(0, localValue_7): "";
       }
       function helperFunction_15(... argumentState) {
-        argumentState[152] = null;
+        argumentState[152] = (void 0);
         try {
           argumentState[152] = JSON.stringify(argumentState[0] ?? null, null, 2);
         }
@@ -15432,7 +15515,7 @@
       }
       function helperFunction_18(argument) {
         if (typeof (argument)?.content === "string") return (argument).content;
-        if ((argument)?.content === null) return "";
+        if ((argument)?.content === (void 0)) return "";
         try {
           return JSON.stringify((argument).content);
         }
@@ -15919,7 +16002,7 @@
         if (localValue_9.stage === "micro-realization") {
           if (! localValue_9.surfaceCommitment || localValue_9.microBeatTotal <= 0) throw new RangeError("micro-realization requires committed beats and surface constraints.");
           const localValue_11 = helperFunction_20(localValue_9.beatCommitment), localValue_12 = localValue_11[localValue_9.microBeatIndex];
-          if (localValue_12 === null) throw new RangeError("micro-realization beat index is out of range.");
+          if (localValue_12 === (void 0)) throw new RangeError("micro-realization beat index is out of range.");
           return Object.freeze({
             stage: "micro-realization",
             purpose: "recover-by-local-realization",
@@ -16074,7 +16157,7 @@
       function helperFunction_13(argument) {
         ;
         return Object.keys(localValue_8).reduce((argument_2, argument_3) => {
-          return (argument_2) + (((argument[(argument_3)]) === (localValue_8[(argument_3)])) ? 0: 1);
+          return (argument_2) + ((argument[(argument_3)] === localValue_8[(argument_3)]) ? 0: 1);
         }
         , 0);
       }
@@ -16133,7 +16216,7 @@
       }
       function helperFunction_20(argument) {
         if (typeof (argument)?.content === "string") return (argument).content;
-        if ((argument)?.content === null) return "";
+        if ((argument)?.content === (void 0)) return "";
         try {
           return JSON.stringify((argument).content);
         }
@@ -16737,7 +16820,7 @@
       }
       function helperFunction_14(argument) {
         if (typeof (argument)?.content === "string") return (argument).content;
-        if ((argument)?.content === null) return "";
+        if ((argument)?.content === (void 0)) return "";
         try {
           return JSON.stringify((argument).content);
         }
@@ -17480,7 +17563,7 @@
         ).lastIndexOf("user");
         return {
           controls: localValue_6.filter((argument_2) => {
-            return (argument_2).role === "system" || (argument_2).role === ("developer");
+            return (argument_2).role === "system" || (argument_2).role === "developer";
           }
           ),
           history: localValue_6.filter(argument_2 => {
@@ -17594,7 +17677,7 @@
             previousState: previousContext?.state ?? ""
           }
           ), turn = (strategy.kind === "adaptive") ? (items.filter((argument) => {
-            return ((argument).strategyFamily) === (("adaptive"));
+            return (argument).strategyFamily === "adaptive";
           }
           ).length + 1): 0, factors = Object.freeze({
             ... strategy.factors,
@@ -17636,7 +17719,7 @@
           if (! helperFunction_27(localValue_8)) break;
         }
         const candidateCount = items.filter((argument) => {
-          return (argument).state === ("quality-pending");
+          return (argument).state === "quality-pending";
         }
         ).length, blockedCount = items.filter((argument) => {
           return (argument).state === "blocked";
@@ -17827,12 +17910,12 @@
       const responsesRequest_e6_2 = bundleModules["responses-request.mjs"].e6, responsesRequest_e0_2 = bundleModules["responses-request.mjs"].e0, localValue_6 = Object.freeze(["<mask_long_term_memory version=\"1\">", "<mask_writer_plot version=\"1\">"]);
       function helperFunction_13(argument) {
         if (typeof argument?.content === "string") return argument.content;
-        if (((typeof argument?.data) === ("string"))) return argument.data;
+        if (((typeof argument?.data) === "string")) return argument.data;
         return "";
       }
       function helperFunction_14(argument) {
         ;
-        if (! Array.isArray((argument))) throw new TypeError(("Logical response source messages must be an array."));
+        if (! Array.isArray((argument))) throw new TypeError("Logical response source messages must be an array.");
         return (argument).filter((argument_2) => {
           ;
           const localValue_7 = helperFunction_13((argument_2));
@@ -18403,7 +18486,7 @@
         catch {
           return null;
         }
-        if (! (0, helperFunction_13)(localValue_8) || localValue_8[localValue_6] === null) return null;
+        if (! (0, helperFunction_13)(localValue_8) || localValue_8[localValue_6] === (void 0)) return null;
         try {
           return helperFunction_20(localValue_8[localValue_6]);
         }
@@ -18418,7 +18501,7 @@
         if (! localValue_7 || typeof localValue_7.arguments !== "string") return null;
         try {
           const localValue_8 = JSON.parse(localValue_7.arguments);
-          return helperFunction_13(localValue_8) && (localValue_8[localValue_6] !== null) ? helperFunction_22(localValue_8[localValue_6]): null;
+          return helperFunction_13(localValue_8) && (localValue_8[localValue_6] !== (void 0)) ? helperFunction_22(localValue_8[localValue_6]): null;
         }
         catch {
           return null;
@@ -18452,7 +18535,7 @@
         if (! storage || typeof storage.getItem !== "function" || typeof storage.setItem !== "function") throw new TypeError("A plugin storage adapter is required.");
         const delta_2 = (0, helperFunction_20)(delta), assistantContentHash = await helperFunction_26(assistantContent), localValue_6 = helperFunction_27(await storage.getItem(textValue_2), now);
         return void (localValue_6.entries = localValue_6.entries.filter((argument) => {
-          return ((argument).assistantContentHash) !== (assistantContentHash);
+          return (argument).assistantContentHash !== assistantContentHash;
         }
         ), localValue_6.entries.push({
           schemaVersion: schemaVersion,
@@ -18559,7 +18642,7 @@
       = {
       }
       ) {
-        const localValue_6 = typeof argument?.output === "string" ? argument.output: "", eventId = uuid(cryptoProvider), localValue_7 = typeof argument?.toolCallId === "string" ? argument.toolCallId: "", localValue_8 = localValue_7 ? await(0, responsesRequest_e6_2)(localValue_7, cryptoProvider): null, success = ((argument?.valid) === true), executeMode = argument?.executeMode === "execute" ? "execute": "skip", settingsRecord_4 = {
+        const localValue_6 = typeof argument?.output === "string" ? argument.output: "", eventId = uuid(cryptoProvider), localValue_7 = typeof argument?.toolCallId === "string" ? argument.toolCallId: "", localValue_8 = localValue_7 ? await(0, responsesRequest_e6_2)(localValue_7, cryptoProvider): (void 0), success = ((argument?.valid) === true), executeMode = argument?.executeMode === "execute" ? "execute": "skip", settingsRecord_4 = {
           schemaVersion: 1,
           event: "terminal_tool.end",
           eventId: eventId,
@@ -18844,7 +18927,7 @@
       }
       function helperFunction_31(argument) {
         if (! (argument) || typeof (argument) !== "object" || Array.isArray((argument))) return null;
-        const usd = helperFunction_30((argument).usd), kind = ["actual", "estimated"].includes((argument).kind) ? (argument).kind: null, pricedRounds = (0, helperFunction_14)((argument).pricedRounds, ((((((- 1))))))), totalRounds = helperFunction_14((argument).totalRounds, (((((((- 1))))))));
+        const usd = helperFunction_30((argument).usd), kind = ["actual", "estimated"].includes((argument).kind) ? (argument).kind: null, pricedRounds = (0, helperFunction_14)((argument).pricedRounds, (((((((- 1)))))))), totalRounds = helperFunction_14((argument).totalRounds, (((((((- 1))))))));
         if ((usd === null) || ! kind || (pricedRounds < 0) || totalRounds < 0 || (pricedRounds > totalRounds)) return null;
         return {
           usd: usd,
@@ -18991,7 +19074,7 @@
       function helperFunction_39(argument) {
         ;
         if (! (argument) || ((typeof (argument)) !== "object") || Array.isArray((argument)) || (argument).schemaVersion !== 1 || ((argument).event !== "provider_run.end")) return null;
-        const eventId = (0, helperFunction_17)((argument).eventId), responseGroupId = (0, helperFunction_17)((argument).responseGroupId, eventId), runKind = uniqueValues_3.has((argument).runKind) ? (argument).runKind: "unknown", timestamp = helperFunction_15((argument).timestamp, Number.NaN), startedAt = (0, helperFunction_15)((argument).startedAt, Number.NaN), durationMs = helperFunction_14((argument).durationMs, (((((((- 1)))))))), completed = (argument).completed === true, toolChoicePolicy = (argument).toolChoicePolicy === null ? "auto": uniqueValues_2.has((argument).toolChoicePolicy) ? (argument).toolChoicePolicy: null, stopReason = uniqueValues.has((argument).stopReason) ? (argument).stopReason: null, errorCode = (argument).errorCode === null ? null: (0, helperFunction_18)((argument).errorCode), errorDetails = (argument).errorDetails == null ? null: helperFunction_38((argument).errorDetails), gatewayRequests = helperFunction_36((argument).gatewayRequests, ["attempted", "succeeded", "failed"]), mcpRequests = helperFunction_36((argument).mcpRequests, ["attempted", "succeeded", "failed", "initialize", "initialized", "toolsList", "toolsCall", "other"]), usage = helperFunction_37((argument).usage), cost = helperFunction_31((argument).cost), economyRounds = helperFunction_14((argument).economyRounds, (argument).economyRounds === null ? 0: (((((((- 1)))))))), terminalEventId = (argument).terminalEventId === null ? null: helperFunction_17((argument).terminalEventId), gatewayProfileId = helperFunction_19((argument).gatewayProfileId);
+        const eventId = (0, helperFunction_17)((argument).eventId), responseGroupId = (0, helperFunction_17)((argument).responseGroupId, eventId), runKind = uniqueValues_3.has((argument).runKind) ? (argument).runKind: "unknown", timestamp = helperFunction_15((argument).timestamp, Number.NaN), startedAt = (0, helperFunction_15)((argument).startedAt, Number.NaN), durationMs = helperFunction_14((argument).durationMs, (((((((- 1)))))))), completed = (argument).completed === true, toolChoicePolicy = (argument).toolChoicePolicy === (void 0) ? "auto": uniqueValues_2.has((argument).toolChoicePolicy) ? (argument).toolChoicePolicy: null, stopReason = uniqueValues.has((argument).stopReason) ? (argument).stopReason: null, errorCode = (argument).errorCode === null ? null: (0, helperFunction_18)((argument).errorCode), errorDetails = (argument).errorDetails == null ? null: helperFunction_38((argument).errorDetails), gatewayRequests = helperFunction_36((argument).gatewayRequests, ["attempted", "succeeded", "failed"]), mcpRequests = helperFunction_36((argument).mcpRequests, ["attempted", "succeeded", "failed", "initialize", "initialized", "toolsList", "toolsCall", "other"]), usage = helperFunction_37((argument).usage), cost = helperFunction_31((argument).cost), economyRounds = helperFunction_14((argument).economyRounds, (argument).economyRounds === (void 0) ? 0: (((((((- 1)))))))), terminalEventId = (argument).terminalEventId === null ? null: helperFunction_17((argument).terminalEventId), gatewayProfileId = helperFunction_19((argument).gatewayProfileId);
         if (! eventId || ! responseGroupId || ! Number.isFinite(timestamp) || ! Number.isFinite(startedAt) || durationMs < 0 || timestamp < startedAt || durationMs !== Math.max(0, Math.round(timestamp - startedAt)) || ! toolChoicePolicy || ! stopReason || (argument).errorDetails != null && ! errorDetails || ! gatewayRequests || ! mcpRequests || ! usage || ! ((argument).registryCacheHit === null || ((typeof (argument).registryCacheHit) === "boolean")) || ! Number.isInteger((argument).toolRounds) || (argument).toolRounds < 0 || (economyRounds < 0) || ! terminalEventId && (argument).terminalEventId !== null || typeof (argument).terminalEventRecorded !== "boolean" || ((typeof (argument).outputSha256) !== "string") || ! new RegExp("^[0-9a-f]{64}$", "").test((argument).outputSha256) || ! Number.isInteger((argument).outputCharacters) || ((argument).outputCharacters < 0) || ! Number.isInteger((argument).outputUtf8Bytes) || ((argument).outputUtf8Bytes < 0)) return null;
         if (mcpRequests.attempted !== ((mcpRequests.initialize + mcpRequests.initialized) + mcpRequests.toolsList) + mcpRequests.toolsCall + mcpRequests.other) return null;
         if (completed ? stopReason === "provider_error" || errorCode !== null: stopReason !== "provider_error" || (errorCode === null)) return null;
@@ -19483,10 +19566,10 @@
         return typeof argument === "string" ? argument: localValue_6;
       }
       function helperFunction_17(argument) {
-        return (argument) === null || (argument) === null ? null: (0, helperFunction_16)((argument), null);
+        return (argument) === null || (argument) === (void 0) ? null: (0, helperFunction_16)((argument), null);
       }
       function helperFunction_18(argument) {
-        if ((argument === null) || argument === null) return null;
+        if ((argument === null) || argument === (void 0)) return null;
         if (((typeof argument) !== "string")) return null;
         const localValue_6 = argument.trim();
         if (localValue_6.length === 0 || localValue_6.length > 128 || ! new RegExp("^[A-Za-z0-9:._-]+$", "").test(localValue_6)) return null;
@@ -19682,7 +19765,7 @@
             )]);
           }
           finally {
-            (localValue_10 !== null) && globalThis.clearTimeout?.(localValue_10);
+            (localValue_10 !== (void 0)) && globalThis.clearTimeout?.(localValue_10);
           }
         }
         async function helperFunction_37(argument, argument_2, argument_3, {
@@ -21224,7 +21307,7 @@
               modelId: modelId,
               routing: localValue_13.gatewayProviderRouting
             }
-            ): null,
+            ): (void 0),
             isAstra: modelCapabilities_e1_2(modelId),
             configuredReasoningEffort: argument_2.reasoningEffort,
             verbosityMode: argument_2.verbosityMode,
@@ -21312,7 +21395,7 @@
       ) {
         ;
         const localValue_11 = argument_2?.values ?? [], localValue_12 = localValue_11.includes(argument_3), localValue_13 = argument_2?.optionEffective?.[argument_3], localValue_14 = localValue_13 && Object.values(localValue_13).some((argument_4) => {
-          return ((argument_4)) !== (null);
+          return (argument_4) !== null;
         }
         ), localValue_15 = localValue_12 ? localValue_11: [... localValue_11, argument_3], localValue_16 = localValue_12 ? localValue_10: {
           ... localValue_10,
@@ -21336,7 +21419,7 @@
         const localValue_13 = argument?.optionEffective?.[argument_2] ?? {
         }
         , items = [... new Set([... argument?.optionRouteIds?.[argument_2] ?? [], ... localValue_12.filter(argument_4 => {
-          return localValue_13[argument_4] !== null && localValue_13[argument_4] !== null;
+          return localValue_13[argument_4] !== null && localValue_13[argument_4] !== (void 0);
         }
         )])];
         if ((items.length === 0)) return "현재 저장값은 배정된 계정에서 사용할 수 없습니다.";
@@ -21360,7 +21443,7 @@
           void (localValue_19.push(argument_3[localValue_17]), lookupMap.set(localValue_18, localValue_19));
         }
         const localValue_14 = [... lookupMap].map(([localValue_17, localValue_18]) => {
-          return [localValue_10[localValue_17] ?? (((localValue_17) === ("null")) ? "전송하지 않음": localValue_17), localValue_18];
+          return [localValue_10[localValue_17] ?? ((localValue_17 === "null") ? "전송하지 않음": localValue_17), localValue_18];
         }
         ), localValue_15 = lookupMap.size > 1 || ! lookupMap.has(String(argument_2)), localValue_16 = localValue_14.length === 1 && localValue_11 && (localValue_14[0][0] === localValue_11);
         return settingsRecord_2.MvNhO(localValue_15, ! localValue_16) && items_2.push(localValue_14.map(([localValue_17, localValue_18]) => {
@@ -21411,7 +21494,7 @@
               return (argument).optionEffective[argument_2]?.[argument_3];
             }
             ).find((argument_3) => {
-              return (argument_3) !== null && (argument_3) !== null;
+              return (argument_3) !== null && (argument_3) !== (void 0);
             }
             );
             return [argument_2, localValue_13 === "none" ? "끔": localValue_12];
@@ -21424,7 +21507,7 @@
         const localValue_10 = Object.keys((argument_3)), localValue_11 = (argument)?.optionEffective?.[(argument_2)] ?? {
         }
         , localValue_12 = localValue_10.filter((argument_4) => {
-          return localValue_11[(argument_4)] !== null && localValue_11[(argument_4)] !== null;
+          return localValue_11[(argument_4)] !== null && localValue_11[(argument_4)] !== (void 0);
         }
         );
         if ((localValue_12.length === 0)) return "현재 저장값은 배정된 계정에서 사용할 수 없습니다.";
@@ -21467,7 +21550,7 @@
           return (argument_2) > localValue_12;
         }
         )) return "현재 저장값은 " + localValue_11.map(([localValue_12, localValue_13]) => {
-          return (("" + (argument).routeLabels[localValue_12] + " 최대 ") + (helperFunction_42(localValue_13)));
+          return (("" + (argument).routeLabels[localValue_12] + " 최대 ") + helperFunction_42(localValue_13));
         }
         ).join(", ") + "보다 큽니다.";
         const uniqueValues_2 = new Set(localValue_11.map(([, localValue_12]) => {
@@ -21476,7 +21559,7 @@
         ));
         if (localValue_11.length === Object.keys(localValue_10).length && uniqueValues_2.size === 1) return "";
         return localValue_11.map(([localValue_12, localValue_13]) => {
-          return (("" + (argument).routeLabels[localValue_12] + " 최대 ") + (helperFunction_42(localValue_13)));
+          return (("" + (argument).routeLabels[localValue_12] + " 최대 ") + helperFunction_42(localValue_13));
         }
         ).join(", ");
       }
@@ -21515,7 +21598,7 @@
         }
         if (lookupMap.size <= 1) return localValue_10;
         const localValue_11 = [... lookupMap].map(([localValue_12, localValue_13]) => {
-          return (("" + localValue_13.join(", ")) + (": ")) + localValue_12;
+          return (("" + localValue_13.join(", ")) + ": ") + localValue_12;
         }
         ).join(". ");
         return [localValue_10, localValue_11].filter(Boolean).join(" ");
@@ -22025,10 +22108,10 @@
         function helperFunction_66(... argumentState) {
           void 0;
           void (argumentState[2] = null, argumentState[0].addEventListener("pointerdown", argument_2 => {
-            argumentState[2] = argument_2.isPrimary !== false && ((argument_2.button) === (0)) && ((argument_2.target) === (argumentState[0])) ? argument_2.pointerId: null;
+            argumentState[2] = argument_2.isPrimary !== false && (argument_2.button === 0) && (argument_2.target === argumentState[0]) ? argument_2.pointerId: null;
           }
           ), argumentState[0].addEventListener("pointerup", argument_2 => {
-            const localValue_34 = argumentState[2] !== null && argument_2.pointerId === argumentState[2] && ((argument_2.target) === (argumentState[0]));
+            const localValue_34 = argumentState[2] !== null && argument_2.pointerId === argumentState[2] && (argument_2.target === argumentState[0]);
             argumentState[2] = null, localValue_34 && argumentState[1]();
           }
           ), argumentState[0].addEventListener("pointermove", (argument_2) => {
@@ -22063,7 +22146,7 @@
           if (! localValue_34 || (argument_2).hidden) return;
           const localValue_35 = lookupMap.get(localValue_34) ?? new Map();
           for (const localValue_36 of(argument_2).querySelectorAll("[data-view-key]")) localValue_35.set((0, helperFunction_68)((argument_2), localValue_36), {
-            open: localValue_36.tagName === "DETAILS" ? localValue_36.open: null,
+            open: localValue_36.tagName === "DETAILS" ? localValue_36.open: (void 0),
             top: localValue_36.scrollTop,
             left: localValue_36.scrollLeft
           }
@@ -22085,7 +22168,7 @@
           const items = [... argument_2.querySelectorAll("[data-view-key]")];
           for (const localValue_38 of items) {
             const localValue_39 = localValue_36.get(helperFunction_100(localValue_38));
-            ((localValue_39?.open) !== null) && (localValue_38.open = localValue_39.open);
+            ((localValue_39?.open) !== (void 0)) && (localValue_38.open = localValue_39.open);
           }
           const localValue_37 = localValue_34 && items.find(argument_4 => {
             return (0, helperFunction_100)(argument_4) === localValue_34;
@@ -22120,7 +22203,7 @@
               }
               );
               void (localValue_36.setAttribute("data-mask-page-id", localValue_35.id), localValue_36.addEventListener("click", (argument_3) => {
-                return helperFunction_73((argument_3).currentTarget.getAttribute(("data-mask-page-id")));
+                return helperFunction_73((argument_3).currentTarget.getAttribute("data-mask-page-id"));
               }
               ), localValue_34.append(localValue_36));
             }
@@ -22336,7 +22419,7 @@
           }
           ), localValue_39.append(localValue_40, localValue_41));
           const localValue_42 = helperFunction_16(localValue_10, "div", "mask-model-list");
-          void (localValue_42.setAttribute("aria-label", "계정 목록"), localValue_42.setAttribute("data-view-key", "account-list"), argumentState[(((((((- 120)))))))] = null);
+          void (localValue_42.setAttribute("aria-label", "계정 목록"), localValue_42.setAttribute("data-view-key", "account-list"), argumentState[(((((((- 120)))))))] = (void 0));
           for (const localValue_49 of localValue_36) {
             const settingsRecord_8 = {
               quiet: true
@@ -22597,7 +22680,7 @@
               ), (0, helperFunction_54)(localValue_34, localValue_37.id), (0, helperFunction_102)(), (0, localValue_41)());
             }
             ), localValue_51.addEventListener("input", (... argumentState) => {
-              void (argumentState.length = 0, argumentState.b = null);
+              void (argumentState.length = 0, argumentState.b = (void 0));
               try {
                 argumentState.b = copilotConnection_e8(localValue_51.value);
               }
@@ -23021,7 +23104,7 @@
         async function helperFunction_84() {
           ;
           const localValue_34 = ++ numericValue_5, localValue_35 = localValue_16, localValue_36 = numericValue_7, localValue_37 = localValue_19, localValue_38 = localValue_20, helperFunction_100 = () => {
-            return ! enabledFlag_12 && ((localValue_34) === (numericValue_5)) && localValue_35 === localValue_16 && localValue_36 === numericValue_7 && localValue_37 === localValue_19 && localValue_38 === localValue_20;
+            return ! enabledFlag_12 && (localValue_34 === numericValue_5) && localValue_35 === localValue_16 && localValue_36 === numericValue_7 && localValue_37 === localValue_19 && localValue_38 === localValue_20;
           }
           , localValue_39 = localValue_16.getAccount(localValue_20), localValue_40 = localValue_16.getModel(localValue_19), nativeAdapterId = providerSettings_e6_2(localValue_40, localValue_39), localValue_41 = (0, helperFunction_47)(localValue_39);
           (0, helperFunction_59)("모델 카탈로그를 불러오는 중...");
@@ -23132,7 +23215,7 @@
             void (helperFunction_59(""), localValue_19 = localValue_40.value);
             const localValue_54 = localValue_16.getModel(localValue_19);
             ! localValue_16.listAccounts().some((argument_2) => {
-              return ((argument_2).id) === (localValue_20);
+              return (argument_2).id === localValue_20;
             }
             ) && (localValue_20 = localValue_54.fixedAccountId || localValue_54.accountIds[0]), void (textValue_11 = null, helperFunction_86());
           }
@@ -23668,7 +23751,7 @@
                     return;
                   }
                   void ((0, helperFunction_52)(localValue_16, localValue_37.id, localValue_116.id, localValue_123.value), (0, helperFunction_62)(), helperFunction_87(localValue_45.scrollTop), [... localValue_36.querySelectorAll("[data-model-account-adapter]")].find((argument_3) => {
-                    return ((argument_3).getAttribute(("data-model-account-adapter"))) === (localValue_116.id);
+                    return (argument_3).getAttribute("data-model-account-adapter") === localValue_116.id;
                   }
                   )?.focus?.({
                     preventScroll: true
@@ -23942,7 +24025,7 @@
               }
               );
               helperFunction_29(localValue_10, localValue_96, [localValue_117, ["flex", "priority"].includes(localValue_116.serviceTier) && (0, helperFunction_15)(localValue_16, localValue_116, runtimeCapabilities).aggregate.routes.some(argument_3 => {
-                return argument_3.fields.serviceTier.note === ("vercel-tier-provider-undocumented");
+                return argument_3.fields.serviceTier.note === "vercel-tier-provider-undocumented";
               }
               ) ? settingsRecord_7.ScGSB: "", localValue_118 ? (localValue_116.serviceTier === "flex") ? settingsRecord_7.jfuRn(settingsRecord_7.rDVEo("Vertex", settingsRecord_7.crqXH), " globa") + "l 위치에서" + "만 사용할 " + "수 있습니다" + ".": "Vertex Priority는 모델에 따라 global, us, eu 위치에서 사용할 수 있습니다.": ""].filter(Boolean).join(" "));
             }
@@ -24672,7 +24755,7 @@
               const helperFunction_102 = (argument_2) => {
                 void 0;
                 return localValue_42.reduce((argument_3, argument_4) => {
-                  return void 0, (((argument_3)) + ((argument_4).documentInput[(argument_2)] ?? 0));
+                  return void 0, ((argument_3) + ((argument_4).documentInput[(argument_2)] ?? 0));
                 }
                 , 0);
               }
@@ -24961,7 +25044,7 @@
       ), textValue_2 = "\n:root {\n  color-scheme: dark;\n  font-family: Inter, Pretendard, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n}\n* {\n  box-sizing: border-box;\n}\nbutton, input, select, textarea {\n  font: inherit;\n}\nbutton:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {\n  outline: 2px solid #60a5fa;\n  outline-offset: 2px;\n}\n.mask-overlay {\n  position: fixed;\n  inset: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 28px;\n  background: rgba(2, 6, 23, .72);\n  backdrop-filter: blur(6px);\n  -webkit-backdrop-filter: blur(6px);\n}\n.mask-panel {\n  width: min(1120px, 100%);\n  height: min(88dvh, 920px);\n  display: grid;\n  grid-template-columns: 220px minmax(0, 1fr);\n  overflow: hidden;\n  border: 1px solid #334155;\n  border-radius: 16px;\n  background: #0f172a;\n  color: #e5e7eb;\n  box-shadow: 0 24px 70px rgba(0, 0, 0, .48);\n}\n.mask-sidebar {\n  min-width: 0;\n  display: flex;\n  flex-direction: column;\n  gap: 18px;\n  padding: 20px 14px;\n  border-right: 1px solid #243244;\n  background: #0b1220;\n}\n.mask-brand {\n  display: grid;\n  gap: 4px;\n  padding: 0 10px;\n}\n.mask-brand strong {\n  color: #f8fafc;\n  font-size: 20px;\n}\n.mask-brand span {\n  color: #64748b;\n  font-size: 11px;\n}\n.mask-workspace {\n  min-width: 0;\n  min-height: 0;\n  display: flex;\n  flex-direction: column;\n}\n.mask-header {\n  flex: 0 0 auto;\n  min-height: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 16px;\n  padding: 14px 18px 12px 22px;\n  border-bottom: 1px solid #243244;\n}\n.mask-title {\n  margin: 0;\n  font-size: 20px;\n  line-height: 1.2;\n}\n.mask-close {\n  width: 40px;\n  height: 40px;\n  border: 0;\n  border-radius: 10px;\n  background: transparent;\n  color: #cbd5e1;\n  font-size: 28px;\n  line-height: 1;\n  cursor: pointer;\n}\n.mask-close:hover {\n  background: #1e293b;\n  color: #fff;\n}\n.mask-tabs {\n  display: grid;\n  gap: 6px;\n}\n.mask-tab {\n  width: 100%;\n  border: 0;\n  border-radius: 9px;\n  background: transparent;\n  color: #94a3b8;\n  padding: 11px 12px;\n  text-align: left;\n  cursor: pointer;\n}\n.mask-tab[aria-selected=\"true\"] {\n  background: #1e293b;\n  color: #f8fafc;\n}\n.mask-status {\n  flex: 0 0 32px;\n  height: 32px;\n  margin: 0;\n  padding: 9px 22px 0;\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  color: #93c5fd;\n  font-size: 13px;\n}\n.mask-model-profile-bar {\n  flex: 0 0 auto;\n  display: grid;\n  grid-template-columns: minmax(0, 1fr) auto auto;\n  align-items: end;\n  gap: 9px;\n  margin: 0 22px 8px;\n  padding: 12px;\n  border: 1px solid #334155;\n  border-radius: 10px;\n  background: #111827;\n}\n.mask-model-profile-picker {\n  display: grid;\n  gap: 5px;\n  min-width: 0;\n  color: #cbd5e1;\n  font-size: 12px;\n}\n.mask-model-profile-picker strong {\n  color: #f8fafc;\n  font-size: 13px;\n}\n.mask-content {\n  flex: 1 1 auto;\n  min-height: 0;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  overflow-anchor: none;\n  scrollbar-gutter: stable;\n  padding: 18px 22px 22px;\n}\n.mask-page {\n  display: grid;\n  min-height: 100%;\n  align-content: start;\n  gap: 20px;\n}\n.mask-page[hidden] {\n  display: none;\n}\n.mask-section {\n  display: grid;\n  gap: 18px;\n  padding: 18px;\n  border: 1px solid #334155;\n  border-radius: 12px;\n  background: #111827;\n}\n.mask-section-title {\n  margin: 0;\n  color: #f8fafc;\n  font-size: 17px;\n  line-height: 1.35;\n}\n.mask-dashboard-note {\n  margin: 0;\n  color: #cbd5e1;\n  font-size: 13px;\n  line-height: 1.6;\n}\n.mask-mcp-list {\n  display: grid;\n  gap: 16px;\n}\n.mask-mcp-server {\n  display: grid;\n  gap: 16px;\n  padding: 16px;\n  border: 1px solid #334155;\n  border-radius: 10px;\n  background: #0b1220;\n}\n.mask-grid {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  column-gap: 16px;\n  row-gap: 18px;\n}\n.mask-field {\n  display: grid;\n  align-content: start;\n  gap: 7px;\n}\n.mask-field-title {\n  display: block;\n  color: #f1f5f9;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 1.35;\n}\n.mask-field-note, .mask-note {\n  display: block;\n  color: #94a3b8;\n  font-size: 12px;\n  line-height: 1.55;\n}\n.mask-input {\n  width: 100%;\n  min-height: 42px;\n  border: 1px solid #475569;\n  border-radius: 8px;\n  background: #020617;\n  color: #f8fafc;\n  padding: 9px 10px;\n}\n.mask-secret-control {\n  display: grid;\n  grid-template-columns: minmax(0, 1fr) auto;\n  gap: 8px;\n}\n.mask-secret-toggle {\n  min-width: 64px;\n  min-height: 42px;\n}\n.mask-check {\n  display: grid;\n  grid-template-columns: auto minmax(0, 1fr);\n  gap: 11px;\n  align-items: start;\n  padding: 2px 0;\n  color: #cbd5e1;\n  font-size: 13px;\n  line-height: 1.45;\n}\n.mask-check > input {\n  width: 18px;\n  height: 18px;\n  min-height: 18px;\n  margin: 2px 0 0;\n  padding: 0;\n}\n.mask-check-copy {\n  display: grid;\n  min-width: 0;\n  gap: 4px;\n}\n.mask-actions {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n.mask-button {\n  min-height: 40px;\n  border: 1px solid #475569;\n  border-radius: 8px;\n  background: #1e293b;\n  color: #f8fafc;\n  padding: 8px 13px;\n  cursor: pointer;\n}\n.mask-button:hover {\n  background: #334155;\n}\n.mask-button-primary {\n  border-color: #2563eb;\n  background: #2563eb;\n}\n.mask-button-primary:hover {\n  background: #1d4ed8;\n}\n.mask-button-danger {\n  border-color: #7f1d1d;\n  color: #fecaca;\n}\n.mask-metrics {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 10px;\n}\n.mask-metric {\n  padding: 13px;\n  border: 1px solid #334155;\n  border-radius: 10px;\n  background: #020617;\n}\n.mask-metric-label {\n  color: #94a3b8;\n  font-size: 12px;\n}\n.mask-metric-value {\n  display: block;\n  margin-top: 5px;\n  font-size: 22px;\n}\n.mask-log-list {\n  display: grid;\n  gap: 10px;\n}\n.mask-provider-run-rounds {\n  display: grid;\n  gap: 8px;\n  padding-left: 10px;\n  border-left: 2px solid #1e3a5f;\n}\n.mask-provider-run-rounds-title {\n  margin: 2px 0 0;\n  color: #cbd5e1;\n  font-size: 13px;\n  font-weight: 600;\n}\n.mask-log {\n  overflow: hidden;\n  border: 1px solid #334155;\n  border-radius: 10px;\n  background: #020617;\n}\n.mask-log > summary {\n  padding: 12px 14px;\n  cursor: pointer;\n  color: #e2e8f0;\n  font-size: 13px;\n  line-height: 1.45;\n  overflow-wrap: anywhere;\n}\n.mask-log-summary-main {\n  display: block;\n}\n.mask-log-summary-usage {\n  display: block;\n  margin-top: 4px;\n  color: #93c5fd;\n  font-size: 12px;\n  font-variant-numeric: tabular-nums;\n}\n.mask-log-body {\n  display: grid;\n  gap: 12px;\n  padding: 0 14px 14px;\n}\n.mask-log-meta {\n  color: #94a3b8;\n  font-size: 12px;\n  line-height: 1.5;\n  overflow-wrap: anywhere;\n}\n.mask-log-token-grid {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 8px;\n}\n.mask-log-token {\n  min-width: 0;\n  padding: 9px 10px;\n  border: 1px solid #1e3a5f;\n  border-radius: 8px;\n  background: #071426;\n}\n.mask-log-token-label {\n  display: block;\n  color: #94a3b8;\n  font-size: 11px;\n}\n.mask-log-token-value {\n  display: block;\n  margin-top: 3px;\n  color: #dbeafe;\n  font-size: 14px;\n  font-variant-numeric: tabular-nums;\n}\n.mask-log-payload {\n  overflow: hidden;\n  border: 1px solid #334155;\n  border-radius: 8px;\n  background: #07101f;\n}\n.mask-log-payload > summary {\n  padding: 10px 12px;\n  cursor: pointer;\n  color: #e2e8f0;\n  font-size: 13px;\n  font-weight: 600;\n}\n.mask-log-payload-body {\n  padding: 0 10px 10px;\n}\n.mask-raw-title {\n  margin: 0 0 6px;\n  font-size: 13px;\n}\n.mask-raw {\n  max-height: 340px;\n  margin: 0;\n  overflow: auto;\n  white-space: pre-wrap;\n  overflow-wrap: anywhere;\n  border: 1px solid #1e293b;\n  border-radius: 8px;\n  background: #000;\n  color: #dbeafe;\n  padding: 11px;\n  font: 12px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;\n}\n.mask-wire {\n  margin-top: 8px;\n  border: 1px solid #1e293b;\n  border-radius: 8px;\n  background: #020617;\n}\n.mask-wire > summary {\n  padding: 8px 10px;\n  cursor: pointer;\n  color: #94a3b8;\n  font-size: 12px;\n}\n.mask-wire .mask-raw {\n  max-height: 260px;\n  border: 0;\n  border-top: 1px solid #1e293b;\n  border-radius: 0;\n}\n.mask-empty {\n  margin: 0;\n  color: #94a3b8;\n  font-size: 13px;\n}\n@media (max-width: 720px) {\n  .mask-overlay {\n    align-items: stretch;\n    padding: 0;\n    background: #0f172a;\n    backdrop-filter: none;\n    -webkit-backdrop-filter: none;\n  }\n  .mask-panel {\n    width: 100%;\n    height: 100dvh;\n    grid-template-columns: 1fr;\n    grid-template-rows: auto minmax(0, 1fr);\n    border: 0;\n    border-radius: 0;\n    box-shadow: none;\n  }\n  .mask-sidebar {\n    gap: 10px;\n    padding: 10px 12px 8px;\n    border-right: 0;\n    border-bottom: 1px solid #243244;\n  }\n  .mask-brand {\n    display: none;\n  }\n  .mask-tabs {\n    display: flex;\n    gap: 4px;\n    overflow-x: auto;\n  }\n  .mask-tab {\n    width: auto;\n    min-width: max-content;\n    padding: 9px 11px;\n  }\n  .mask-header {\n    padding-left: 16px;\n  }\n  .mask-status {\n    padding-left: 16px;\n    padding-right: 16px;\n  }\n  .mask-model-profile-bar {\n    grid-template-columns: 1fr 1fr;\n    margin: 0 14px 8px;\n  }\n  .mask-model-profile-picker {\n    grid-column: 1 / -1;\n  }\n  .mask-content {\n    padding: 16px;\n  }\n  .mask-grid, .mask-metrics, .mask-log-token-grid {\n    grid-template-columns: 1fr;\n  }\n}\n";
       function helperFunction_15(argument, argument_2, argument_3, argument_4) {
         const localValue_9 = (argument).createElement((argument_2));
-        return (argument_3) && (localValue_9.className = (argument_3)), ((argument_4) !== null) && (localValue_9.textContent = (argument_4)), localValue_9;
+        return (argument_3) && (localValue_9.className = (argument_3)), ((argument_4) !== (void 0)) && (localValue_9.textContent = (argument_4)), localValue_9;
       }
       function helperFunction_16(argument, argument_2, argument_3) {
         typeof (argument).setAttribute === "function" ? (argument).setAttribute((argument_2), (0, String)((argument_3))): (argument)[(argument_2)] = String((argument_3));
@@ -24990,7 +25073,7 @@
         const localValue_9 = helperFunction_15(argument, "div", "mask-secret-control"), localValue_10 = (0, helperFunction_17)(argument, "보기");
         return void (localValue_10.className = ("" + localValue_10.className) + " mask-secret-toggle", helperFunction_16(localValue_10, "aria-pressed", "false"), localValue_10.addEventListener("click", () => {
           ;
-          const localValue_11 = ((argument_2.type) === (("password")));
+          const localValue_11 = (argument_2.type === "password");
           void (argument_2.type = localValue_11 ? "text": "password", localValue_10.textContent = localValue_11 ? "숨기기": "보기", helperFunction_16(localValue_10, "aria-pressed", localValue_11 ? "true": "false"));
         }
         ), localValue_9.append(argument_2, localValue_10)), localValue_9;
@@ -25094,7 +25177,7 @@
         void (delete settingsRecord_4.content, delete settingsRecord_4.arguments, delete settingsRecord_4.output, delete settingsRecord_4.summary);
         typeof settingsRecord_4.encrypted_content === "string" && (settingsRecord_4.encrypted_content = (("<암호화된 추론 " + settingsRecord_4.encrypted_content.length) + "자>"));
         Object.keys(settingsRecord_4).length > 1 && items.push((0, helperFunction_29)(settingsRecord_4));
-        (argument.content !== null) && items.push((0, helperFunction_30)(argument.content));
+        (argument.content !== (void 0)) && items.push((0, helperFunction_30)(argument.content));
         Array.isArray(argument.summary) && (argument.summary.length > 0) && items.push("[추론 요약]\n" + argument.summary.map((argument_3) => {
           return typeof (argument_3)?.text === "string" ? (argument_3).text: helperFunction_29((argument_3) ?? null);
         }
@@ -25103,7 +25186,7 @@
           const localValue_11 = helperFunction_28(argument.arguments);
           items.push(("[호출 인자]\n" + (localValue_11 === null ? argument.arguments: helperFunction_29(localValue_11))));
         }
-        if (argument.output !== null) {
+        if (argument.output !== (void 0)) {
           const localValue_11 = typeof argument.output === "string" ? helperFunction_28(argument.output): argument.output;
           items.push("[도구 결과]\n" + (localValue_11 === null ? String(argument.output): helperFunction_29(localValue_11)));
         }
@@ -25186,7 +25269,7 @@
         argumentState[1] = "";
         const lookupMap = new Map();
         for (const localValue_10 of localValue_9) {
-          for (const localValue_11 of["id", "model", "service_tier", "providerMetadata", "provider_metadata"]) localValue_10?.[localValue_11] !== null && (settingsRecord_4[localValue_11] = localValue_10[localValue_11]);
+          for (const localValue_11 of["id", "model", "service_tier", "providerMetadata", "provider_metadata"]) localValue_10?.[localValue_11] !== (void 0) && (settingsRecord_4[localValue_11] = localValue_10[localValue_11]);
           localValue_10?.usage && typeof localValue_10.usage === "object" && (settingsRecord_4.usage = localValue_10.usage);
           for (const localValue_11 of Array.isArray(localValue_10?.choices) ? localValue_10.choices: []) {
             if ((localValue_11?.index ?? 0) !== 0) continue;
@@ -25211,11 +25294,11 @@
               }
               );
             }
-            localValue_11?.finish_reason !== null && (settingsRecord_4.finish_reason = localValue_11.finish_reason);
+            localValue_11?.finish_reason !== (void 0) && (settingsRecord_4.finish_reason = localValue_11.finish_reason);
           }
         }
         return argumentState[1].length > 0 && (settingsRecord_4.content = argumentState[1]), (lookupMap.size > 0) && (settingsRecord_4.toolCalls = [... lookupMap.entries()].sort(([localValue_10], [localValue_11]) => {
-          return ((localValue_10) - (localValue_11));
+          return (localValue_10 - localValue_11);
         }
         ).map(([, localValue_10]) => {
           return localValue_10;
@@ -25250,7 +25333,7 @@
               return (argument_2)?.type === "done";
             }
             ) ?? [... localValue_9].reverse().find((argument_2) => {
-              return ((argument_2)?.type) === ("done");
+              return ((argument_2)?.type) === "done";
             }
             );
             if (localValue_14?.data) return helperFunction_36(localValue_14.data);
@@ -25298,7 +25381,7 @@
         return (0, observability_e1)({
           usage: (usage),
           modelId: localValue_10?.model ?? (argument)?.modelId ?? localValue_11?.model,
-          serviceTier: localValue_10?.service_tier ?? localValue_10?.serviceTier ?? ((argument)?.gatewayProfileId === "vercel-ai-gateway" || localValue_11?.providerOptions?.gateway ? null: localValue_11?.service_tier ?? localValue_11?.serviceTier),
+          serviceTier: localValue_10?.service_tier ?? localValue_10?.serviceTier ?? ((argument)?.gatewayProfileId === "vercel-ai-gateway" || localValue_11?.providerOptions?.gateway ? (void 0): localValue_11?.service_tier ?? localValue_11?.serviceTier),
           gatewayMetadata: localValue_10?.providerMetadata?.gateway ?? localValue_10?.provider_metadata?.gateway ?? localValue_9?.providerMetadata?.gateway ?? localValue_9?.provider_metadata?.gateway,
           reportedCost: localValue_10?.usage?.cost
         }
@@ -25474,7 +25557,7 @@
         const localValue_11 = (0, helperFunction_15)(argument, "div", "mask-log-body");
         localValue_11.append((0, helperFunction_15)(argument, "div", "mask-log-meta", ["실행 ID " + argument_2.eventId, "상태 " + (argument_2.completed ? "완료": ("실패 " + (argument_2.errorCode ?? "")).trim()), argument_2.errorDetails ? ((((("검증 " + argument_2.errorDetails.reason + "\n필드 " + argument_2.errorDetails.path) + "\n기대 ") + argument_2.errorDetails.expected) + "\n실제 " + argument_2.errorDetails.actualType) + (Number.isInteger(argument_2.errorDetails.actualSize) ? ", 크기 " + argument_2.errorDetails.actualSize: "")): "", "종료 " + argument_2.stopReason, (("도구 후속 " + helperFunction_27(argument_2.toolRounds)) + "회, 모델 요청 ") + helperFunction_27(argument_2.gatewayRequests.attempted) + "회", argument_2.cost ? "비용 반영 라운드 " + (0, helperFunction_27)(argument_2.cost.pricedRounds) + " / " + helperFunction_27(argument_2.cost.totalRounds): ""].filter(Boolean).join("\n")), ... includeUsage ? [helperFunction_47(argument, settingsRecord_4, argument_2.cost)]: []);
         const localValue_12 = [... argument_3].sort((argument_5, argument_6) => {
-          return argument_5.startedAt - argument_6.startedAt || ((argument_5.timestamp) - (argument_6.timestamp));
+          return argument_5.startedAt - argument_6.startedAt || (argument_5.timestamp - argument_6.timestamp);
         }
         ), localValue_13 = localValue_12.some(argument_5 => {
           return Number.isInteger(argument_5.logicalRound);
@@ -25983,7 +26066,7 @@
         = {
         }
         ) {
-          void (super (argument), this.name = "McpTransportError"), status !== null && (this.status = status), (code !== null) && (this.code = code);
+          void (super (argument), this.name = "McpTransportError"), status !== (void 0) && (this.status = status), (code !== (void 0)) && (this.code = code);
         }
       }
       ;
@@ -26232,10 +26315,10 @@
             name: clientInfo.name,
             version: clientInfo.version
           }
-          , this.bearerToken = localValue_7, this.requestLogRecorder = requestLogRecorder, this.sessionId = null, this.negotiatedProtocolVersion = null, this.initializeResult = null, this.initialized = false, this.nextRequestId = 1, this.initializationPromise = null);
+          , this.bearerToken = localValue_7, this.requestLogRecorder = requestLogRecorder, this.sessionId = (void 0), this.negotiatedProtocolVersion = (void 0), this.initializeResult = (void 0), this.initialized = false, this.nextRequestId = 1, this.initializationPromise = (void 0));
         }
         ["resetSession"]() {
-          void (this.sessionId = null, this.negotiatedProtocolVersion = null, this.initializeResult = null, this.initialized = false, this.initializationPromise = null);
+          void (this.sessionId = (void 0), this.negotiatedProtocolVersion = (void 0), this.initializeResult = (void 0), this.initialized = false, this.initializationPromise = (void 0));
         }
         async["post"](argument, {
           initialization: initialization = false, signal: signal, observation: observation
@@ -26319,7 +26402,7 @@
             }
             ), {
               messages: localValue_7.messages,
-              sessionId: initialization ? localValue_6.headers.get("mcp-session-id") ?? null: null
+              sessionId: initialization ? localValue_6.headers.get("mcp-session-id") ?? (void 0): (void 0)
             }
             ;
           }
@@ -26402,7 +26485,7 @@
             return await this.initializationPromise;
           }
           finally {
-            this.initializationPromise = null;
+            this.initializationPromise = (void 0);
           }
         }
         async["request"](method, params = {
@@ -26484,7 +26567,7 @@
               );
               void (uniqueValues.add(localValue_9), items.push(localValue_8));
             }
-            const localValue_7 = typeof localValue_6.nextCursor === "string" && localValue_6.nextCursor.length > 0 ? localValue_6.nextCursor: null;
+            const localValue_7 = typeof localValue_6.nextCursor === "string" && localValue_6.nextCursor.length > 0 ? localValue_6.nextCursor: (void 0);
             if (! localValue_7) return items;
             if (uniqueValues_2.has(localValue_7)) throw new argumentState[(((((((- 80)))))))]("MCP tools/list repeated a pagination cursor.", {
               code: "repeated_tools_cursor"
@@ -27105,9 +27188,9 @@
         if (! Array.isArray((argument)) || (argument).length < 2 || (argument).length > 4) throw new RuntimeClass("suggestedReplies must contain 2 to 4 items.");
         const localValue_6 = (argument).map((argument_2) => {
           ;
-          if (((typeof (argument_2)) !== ("string"))) throw new RuntimeClass(("suggestedReplies items must be strings."));
+          if (((typeof (argument_2)) !== "string")) throw new RuntimeClass("suggestedReplies items must be strings.");
           const localValue_7 = (argument_2).trim().replace(new RegExp("\\s+", "g"), " ");
-          if (localValue_7.length === 0 || ((localValue_7.length) > (160)) || new RegExp("[\\u0000-\\u001f\\u007f]", "").test(localValue_7)) throw new RuntimeClass(("suggestedReplies items must be concise single-line text."));
+          if (localValue_7.length === 0 || (localValue_7.length > 160) || new RegExp("[\\u0000-\\u001f\\u007f]", "").test(localValue_7)) throw new RuntimeClass("suggestedReplies items must be concise single-line text.");
           return localValue_7;
         }
         );
@@ -27125,19 +27208,19 @@
           [argument_2.terminalParameter]: helperFunction_19(argument, argument_2.terminalParameter, 500000)
         }
         ;
-        argument_2.terminalNoteParameter && argument[argument_2.terminalNoteParameter] !== null && (settingsRecord_4[argument_2.terminalNoteParameter] = (0, helperFunction_19)(argument, argument_2.terminalNoteParameter, 100000));
+        argument_2.terminalNoteParameter && argument[argument_2.terminalNoteParameter] !== (void 0) && (settingsRecord_4[argument_2.terminalNoteParameter] = (0, helperFunction_19)(argument, argument_2.terminalNoteParameter, 100000));
         if (argument_2.terminalCorrectionsParameter) {
           const localValue_6 = terminalCore_e5(settingsRecord_4[argument_2.terminalParameter], argument[argument_2.terminalCorrectionsParameter], argument_2.terminalCorrectionsParameter);
           if (! localValue_6.valid) throw new RuntimeClass(localValue_6.output);
           settingsRecord_4[argument_2.terminalParameter] = localValue_6.output;
         }
-        if (argument_2.terminalMemoryParameter && argument[argument_2.terminalMemoryParameter] !== null) try {
+        if (argument_2.terminalMemoryParameter && argument[argument_2.terminalMemoryParameter] !== (void 0)) try {
           settingsRecord_4[argument_2.terminalMemoryParameter] = memoryDelta_e2(argument[argument_2.terminalMemoryParameter]);
         }
         catch (caughtError) {
           throw new RuntimeClass(caughtError?.message ?? "memoryDelta is invalid.");
         }
-        if (argument_2.terminalPlotParameter && argument[argument_2.terminalPlotParameter] !== null) try {
+        if (argument_2.terminalPlotParameter && argument[argument_2.terminalPlotParameter] !== (void 0)) try {
           settingsRecord_4[argument_2.terminalPlotParameter] = (0, memoryDelta_e3)(argument[argument_2.terminalPlotParameter]);
         }
         catch (caughtError) {
@@ -27695,7 +27778,7 @@
                   case "0": void (enabledFlag_9 = true, this.pending.delete (localValue_6));
                   continue;
                   case "1": return true;
-                  case "2": (localValue_8 !== null) && clearTimeout(localValue_8);
+                  case "2": (localValue_8 !== (void 0)) && clearTimeout(localValue_8);
                   continue;
                   case "3": signal?.removeEventListener?.("abort", helperFunction_15);
                   continue;
@@ -27826,11 +27909,11 @@
           }
           );
           return localValue_6.find((argument_2) => {
-            return ((argument_2)) !== ("null");
+            return (argument_2) !== "null";
           }
           ) ?? localValue_6[0];
         }
-        return null;
+        return (void 0);
       }
       function helperFunction_15(argument, argument_2) {
         if (argument_2 === null) return argument === "null";
@@ -27856,7 +27939,7 @@
           ,
           additionalProperties: false
         }
-        : null;
+        : (void 0);
         const settingsRecord_4 = {
           type: localValue_7
         }
@@ -27938,8 +28021,8 @@
         }
         const localValue_6 = argument.map((argument_2, argument_3) => {
           const rawName = typeof argument_2?.name === "string" ? argument_2.name.trim(): "";
-          if (! rawName) throw new TypeError(((("MCP tool at index ") + argument_3) + ((" has no name."))));
-          const exposedName = uniqueValues_2.has(rawName) ? rawName: helperFunction_18(rawName, namespace), description = typeof argument_2.description === "string" && ((argument_2.description.trim().length) > (0)) ? argument_2.description.trim(): ("MCP tool ") + rawName + ".";
+          if (! rawName) throw new TypeError((("MCP tool at index " + argument_3) + " has no name."));
+          const exposedName = uniqueValues_2.has(rawName) ? rawName: helperFunction_18(rawName, namespace), description = typeof argument_2.description === "string" && (argument_2.description.trim().length > 0) ? argument_2.description.trim(): "MCP tool " + rawName + ".";
           return {
             rawName: rawName,
             exposedName: exposedName,
@@ -28042,7 +28125,7 @@
       }
       function helperFunction_22(argument) {
         ;
-        if ((argument)?.structuredContent !== null) return JSON.stringify((argument).structuredContent, null, 2);
+        if ((argument)?.structuredContent !== (void 0)) return JSON.stringify((argument).structuredContent, null, 2);
         const localValue_6 = ((argument)?.content ?? []).filter((argument_2) => {
           return (((argument_2)?.type) === "text") && typeof (argument_2).text === "string";
         }
@@ -28375,15 +28458,15 @@
           let numericValue_14 = 0;
           while (! ! []) {
             switch (localValue_11[numericValue_14 ++]) {
-              case "0": retryDisposition !== null && (this.retryDisposition = retryDisposition);
+              case "0": retryDisposition !== (void 0) && (this.retryDisposition = retryDisposition);
               continue;
-              case "1": (code !== null) && (this.code = code);
+              case "1": (code !== (void 0)) && (this.code = code);
               continue;
-              case "2": publicContext !== null && (this.publicContext = publicContext);
+              case "2": publicContext !== (void 0) && (this.publicContext = publicContext);
               continue;
               case "3": void (super (argument), this.name = "ProviderRuntimeError");
               continue;
-              case "4": (status !== null) && (this.status = status);
+              case "4": (status !== (void 0)) && (this.status = status);
               continue;
             }
             break;
@@ -28457,7 +28540,7 @@
           return argumentState_2[0]();
         }
         catch {
-          return null;
+          return (void 0);
         }
       }
       function helperFunction_24(argument) {
@@ -28789,7 +28872,7 @@
             return localValue_11?.message;
           }
           ))]], items_2 = ["[Mask Provider Diagnostic]", ... items.filter(([, localValue_29]) => {
-            return localValue_29 !== null && localValue_29 !== null;
+            return localValue_29 !== null && localValue_29 !== (void 0);
           }
           ).map(([localValue_29, localValue_30]) => {
             return "" + localValue_29 + ": " + localValue_30;
@@ -29129,9 +29212,9 @@
         if (argument_2?.aborted) throw (0, abortError)(argument_2);
         if ((argument <= 0) || typeof globalThis.setTimeout !== "function") return;
         await new Promise((... argumentState_2) => {
-          void (argumentState_2.length = 2, argumentState_2[2] = null);
+          void (argumentState_2.length = 2, argumentState_2[2] = (void 0));
           const helperFunction_109 = () => {
-            (argumentState_2[2] !== null) && globalThis.clearTimeout?.(argumentState_2[2]), argumentState_2[1]((0, abortError)(argument_2));
+            (argumentState_2[2] !== (void 0)) && globalThis.clearTimeout?.(argumentState_2[2]), argumentState_2[1]((0, abortError)(argument_2));
           }
           ;
           void (argumentState_2[2] = globalThis.setTimeout(() => {
@@ -29296,9 +29379,9 @@
         }
         );
         const headers = new Headers();
-        for (const [localValue_14, localValue_15] of Object.entries(localValue_11))(localValue_15 !== null) && localValue_15 !== null && headers.set(localValue_14, Array.isArray(localValue_15) ? localValue_15.join(", "): String(localValue_15));
+        for (const [localValue_14, localValue_15] of Object.entries(localValue_11))(localValue_15 !== null) && localValue_15 !== (void 0) && headers.set(localValue_14, Array.isArray(localValue_15) ? localValue_15.join(", "): String(localValue_15));
         argumentState_2.a = argumentState_2[0].data;
-        (argumentState_2.a === null) || argumentState_2.a === null ? argumentState_2.a = "": argumentState_2.a instanceof ArrayBuffer ? argumentState_2.a = new Uint8Array(argumentState_2.a): ArrayBuffer.isView(argumentState_2.a) ? argumentState_2.a = new Uint8Array(argumentState_2.a.buffer, argumentState_2.a.byteOffset, argumentState_2.a.byteLength): ((typeof argumentState_2.a) !== "string") && (argumentState_2.a = JSON.stringify(argumentState_2.a), ! headers.has("content-type") && headers.set("content-type", "application/json"));
+        (argumentState_2.a === null) || argumentState_2.a === (void 0) ? argumentState_2.a = "": argumentState_2.a instanceof ArrayBuffer ? argumentState_2.a = new Uint8Array(argumentState_2.a): ArrayBuffer.isView(argumentState_2.a) ? argumentState_2.a = new Uint8Array(argumentState_2.a.buffer, argumentState_2.a.byteOffset, argumentState_2.a.byteLength): ((typeof argumentState_2.a) !== "string") && (argumentState_2.a = JSON.stringify(argumentState_2.a), ! headers.has("content-type") && headers.set("content-type", "application/json"));
         const localValue_13 = (0, Number)(argumentState_2[0].status), status = Number.isInteger(localValue_13) && localValue_13 >= 200 && (localValue_13 <= 599) ? localValue_13: (argumentState_2[0].ok === true) ? 200: 500;
         return new Response(argumentState_2.a, {
           status: status,
@@ -29350,7 +29433,7 @@
         }
       }
       function helperFunction_73(... argumentState_2) {
-        argumentState_2[1] = null;
+        argumentState_2[1] = (void 0);
         try {
           argumentState_2[1] = JSON.parse(argumentState_2[0]);
         }
@@ -29402,7 +29485,7 @@
         }
       }
       function helperFunction_77(... argumentState_2) {
-        argumentState_2[1] = null;
+        argumentState_2[1] = (void 0);
         try {
           argumentState_2[1] = JSON.parse(argumentState_2[0]);
         }
@@ -29516,7 +29599,7 @@
           code: "invalid_transport_proxy"
         }
         );
-        const token_2 = token === null || token === null ? "": String(token).trim();
+        const token_2 = token === (void 0) || token === null ? "": String(token).trim();
         if (new RegExp("[\\r\\n]", "").test(token_2)) throw new argumentState[(((((((- 171)))))))]("CORS transport proxy token must not contain line breaks.", {
           code: "invalid_transport_proxy"
         }
@@ -29674,7 +29757,7 @@
           hasVisionContent: Array.isArray(request.input) && request.input.some((argument) => {
             ;
             return Array.isArray((argument)?.content) && (argument).content.some(argument_2 => {
-              return argument_2?.type === ("input_image");
+              return argument_2?.type === "input_image";
             }
             );
           }
@@ -29963,7 +30046,7 @@
               code: errorCode,
               status: localValue_27?.status,
               publicContext: publicContext,
-              retryDisposition: ((localValue_27?.status) === 502) && (responseBody.length === 0) && responseContentType.length === 0 && settingsRecord_6.bodyReadMode !== "unreadable" && localValue_24.diagnostics().firstByteReceived !== true ? "empty-prestream": null
+              retryDisposition: ((localValue_27?.status) === 502) && (responseBody.length === 0) && responseContentType.length === 0 && settingsRecord_6.bodyReadMode !== "unreadable" && localValue_24.diagnostics().firstByteReceived !== true ? "empty-prestream": (void 0)
             }
             );
           }
@@ -29995,7 +30078,7 @@
               , accumulator ? {
                 accumulator: accumulator
               }
-              : null);
+              : (void 0));
             }
             else {
               const localValue_33 = await(0, helperFunction_69)(argument, localValue_30, settingsRecord_6, localValue_22), localValue_34 = localValue_33.trimStart();
@@ -30005,7 +30088,7 @@
               (), helperFunction_115, accumulator ? {
                 accumulator: accumulator
               }
-              : null));
+              : (void 0)));
               else {
                 if (settingsRecord_6.responseContentType.includes("json") || localValue_34.startsWith("{")) {
                   settingsRecord_6.bodyReadMode = "buffered-json";
@@ -30299,14 +30382,14 @@
               return helperFunction_83(localValue_13, requiredToolNames), localValue_13;
             }
             )().catch ((argument) => {
-              void (localValue_11 = null);
+              void (localValue_11 = (void 0));
               throw (argument);
             }
             )), localValue_11;
           }
           ,
           ["invalidateRegistry"]() {
-            localValue_11 = null;
+            localValue_11 = (void 0);
           }
         }
         ;
@@ -30339,14 +30422,14 @@
               return mcpTools_e2(items);
             }
             )().catch ((argument) => {
-              void (localValue_11 = null);
+              void (localValue_11 = (void 0));
               throw (argument);
             }
             )), localValue_11;
           }
           ,
           ["invalidateRegistry"]() {
-            void (localValue_11 = null, primary.invalidateRegistry?.());
+            void (localValue_11 = (void 0), primary.invalidateRegistry?.());
             for (const localValue_12 of additional) localValue_12.invalidateRegistry?.();
           }
         }
@@ -30645,10 +30728,10 @@
             return localValue_13.startsWith((argument_4));
           }
           )) return [];
-          if (((localValue_12.length) === (0))) return [(argument_3)];
+          if ((localValue_12.length === 0)) return [(argument_3)];
           const content = (argument_3).content.split(new RegExp("\\r?\\n", "")).filter(argument_4 => {
             return ! localValue_12.some((argument_5) => {
-              return (argument_4.trim()) === ((argument_5).trim());
+              return argument_4.trim() === (argument_5).trim();
             }
             );
           }
@@ -30706,7 +30789,7 @@
           failure: "missing_tool_call"
         }
         ;
-        argumentState_2.a = null;
+        argumentState_2.a = (void 0);
         try {
           argumentState_2.a = typeof localValue_11.arguments === "string" ? JSON.parse(localValue_11.arguments): localValue_11.arguments;
         }
@@ -30751,17 +30834,17 @@
           ... (argument)
         }
         , localValue_11 = settingsRecord_5;
-        for (const localValue_12 of["prompt_cache_key", "prompt_cache_options"])(argument_2)[localValue_12] !== null ? localValue_11[localValue_12] = (argument_2)[localValue_12]: delete localValue_11[localValue_12];
+        for (const localValue_12 of["prompt_cache_key", "prompt_cache_options"])(argument_2)[localValue_12] !== (void 0) ? localValue_11[localValue_12] = (argument_2)[localValue_12]: delete localValue_11[localValue_12];
         return localValue_11;
       }
       function helperFunction_104(argument) {
-        if ((argument === null) || argument === null) return [];
+        if ((argument === (void 0)) || argument === null) return [];
         if (! Array.isArray(argument)) throw new TypeError("astraContinuationInput must be an array.");
         if (argument.length === 0) return [];
         if (argument.length !== 2) throw new TypeError("Writer-entry continuation must contain one completed function call and its result.");
         const [localValue_11, localValue_12] = argument;
-        if (((localValue_11?.type) !== "function_call") || localValue_11?.name !== "mask_open_manuscript" || typeof localValue_11?.call_id !== "string" || ! localValue_11.call_id || ((typeof localValue_11?.arguments) !== "string") || localValue_11.status !== null && localValue_11.status !== "completed") throw new TypeError("Invalid writer-entry function call.");
-        if (localValue_12?.type !== "function_call_output" || localValue_12?.call_id !== localValue_11.call_id || ((typeof localValue_12?.output) !== "string") || (localValue_12.status !== null) && localValue_12.status !== "completed") throw new TypeError("Invalid writer-entry function result.");
+        if (((localValue_11?.type) !== "function_call") || localValue_11?.name !== "mask_open_manuscript" || typeof localValue_11?.call_id !== "string" || ! localValue_11.call_id || ((typeof localValue_11?.arguments) !== "string") || localValue_11.status !== (void 0) && localValue_11.status !== "completed") throw new TypeError("Invalid writer-entry function call.");
+        if (localValue_12?.type !== "function_call_output" || localValue_12?.call_id !== localValue_11.call_id || ((typeof localValue_12?.output) !== "string") || (localValue_12.status !== (void 0)) && localValue_12.status !== "completed") throw new TypeError("Invalid writer-entry function result.");
         try {
           void (JSON.parse(localValue_11.arguments), JSON.parse(localValue_12.output));
         }
@@ -30778,15 +30861,15 @@
         return [settingsRecord_5, settingsRecord_6];
       }
       function helperFunction_105(... argumentState_2) {
-        if (argumentState_2[0] === null || argumentState_2[0] === null) return [];
+        if (argumentState_2[0] === (void 0) || argumentState_2[0] === null) return [];
         if (! Array.isArray(argumentState_2[0])) throw new TypeError("astraRefusalPreludeInput must be an array.");
         if (argumentState_2[0].length === 0) return [];
         if (argumentState_2[1].terminalParameter !== "contentToMask") throw new TypeError("Refusal prelude requires the contentToMask terminal contract.");
         if (argumentState_2[0].length !== 2) throw new TypeError("Refusal prelude must contain one completed terminal call and its error result.");
         const [localValue_11, localValue_12] = argumentState_2[0];
-        if (localValue_11?.type !== "function_call" || localValue_11?.name !== argumentState_2[1].terminalToolName || typeof localValue_11?.call_id !== "string" || ! localValue_11.call_id || typeof localValue_11?.arguments !== "string" || localValue_11.status !== null && (localValue_11.status !== "completed")) throw new TypeError("Invalid refusal-prelude terminal call.");
-        if (((localValue_12?.type) !== "function_call_output") || ((localValue_12?.call_id) !== localValue_11.call_id) || ((typeof localValue_12?.output) !== "string") || localValue_12.status !== null && localValue_12.status !== "completed") throw new TypeError("Invalid refusal-prelude terminal result.");
-        argumentState_2.a = null;
+        if (localValue_11?.type !== "function_call" || localValue_11?.name !== argumentState_2[1].terminalToolName || typeof localValue_11?.call_id !== "string" || ! localValue_11.call_id || typeof localValue_11?.arguments !== "string" || localValue_11.status !== (void 0) && (localValue_11.status !== "completed")) throw new TypeError("Invalid refusal-prelude terminal call.");
+        if (((localValue_12?.type) !== "function_call_output") || ((localValue_12?.call_id) !== localValue_11.call_id) || ((typeof localValue_12?.output) !== "string") || localValue_12.status !== (void 0) && localValue_12.status !== "completed") throw new TypeError("Invalid refusal-prelude terminal result.");
+        argumentState_2.a = (void 0);
         try {
           argumentState_2.a = JSON.parse(localValue_11.arguments);
         }
@@ -30863,10 +30946,10 @@
           code: "invalid_provider_setting"
         }
         );
-        const structuredOutputToolName = maskResponseFormat === "structured-output" && ! localValue_11 ? roleplayContract.terminalToolName: null, structuredOutputSchema = structuredOutputToolName ? (0, localMcpTools_e0)(roleplayContract, {
+        const structuredOutputToolName = maskResponseFormat === "structured-output" && ! localValue_11 ? roleplayContract.terminalToolName: (void 0), structuredOutputSchema = structuredOutputToolName ? (0, localMcpTools_e0)(roleplayContract, {
           suggestedRepliesEnabled: suggestedRepliesEnabled
         }
-        ): null, localValue_16 = structuredOutputSchema ? (0, responsesRequest_e8)(structuredOutputSchema): null, helperFunction_109 = (argument) => {
+        ): (void 0), localValue_16 = structuredOutputSchema ? (0, responsesRequest_e8)(structuredOutputSchema): (void 0), helperFunction_109 = (argument) => {
           return upstreamWebSearch ? (("" + (argument)) + ":web-search"): (argument);
         }
         ;
@@ -30879,7 +30962,7 @@
         if (((typeof activateQuarantinedApprovalReceipt) !== "boolean")) throw new TypeError("activateQuarantinedApprovalReceipt must be a boolean.");
         if (typeof sourceBoundQuarantineReceipt_2 !== "boolean") throw new TypeError("sourceBoundQuarantineReceipt must be a boolean.");
         if (sourceBoundQuarantineReceipt_2 && ! activateQuarantinedApprovalReceipt) throw new TypeError("sourceBoundQuarantineReceipt requires quarantined writer isolation.");
-        if (prepareWriterSupplement !== null && ((typeof prepareWriterSupplement) !== "function")) throw new TypeError("prepareWriterSupplement must be a function.");
+        if (prepareWriterSupplement !== (void 0) && ((typeof prepareWriterSupplement) !== "function")) throw new TypeError("prepareWriterSupplement must be a function.");
         if (typeof deferWriterSupplementUntilApproval !== "boolean") throw new TypeError("deferWriterSupplementUntilApproval must be a boolean.");
         if (settingsRecord_2.gLLIP(activateSelectedContinuationContract, activateQuarantinedApprovalReceipt)) throw new TypeError("Only one fresh manuscript handoff may be active.");
         if (activateQuarantinedApprovalReceipt && ! preseedMetadataTools) throw new argumentState[(((((((- 171)))))))]("The quarantined approval receipt requires metadata-preseed review.", {
@@ -31023,7 +31106,7 @@
         modelCapabilities_e2({
           modelId: modelId ?? localValue_17.profile.modelId,
           hasTools: localValue_15 || localValue_27.some((argument) => {
-            return ((argument).name) !== (structuredOutputToolName);
+            return (argument).name !== structuredOutputToolName;
           }
           ),
           usesChatCompletions: localValue_23 || localValue_24
@@ -31094,9 +31177,9 @@
         const helperFunction_110 = async() => {
           if (enabledFlag_9) return textValue_3;
           enabledFlag_9 = true;
-          if (typeof prepareWriterSupplement !== ("function")) return "";
+          if (typeof prepareWriterSupplement !== "function") return "";
           const localValue_36 = await prepareWriterSupplement();
-          return textValue_3 = ((typeof localValue_36) === ("string")) ? localValue_36.trim(): "", textValue_3;
+          return textValue_3 = ((typeof localValue_36) === "string") ? localValue_36.trim(): "", textValue_3;
         }
         , localValue_31 = deferWriterSupplementUntilApproval && ! sourceBoundQuarantineReceipt_2 ? "": await(0, helperFunction_110)(), localValue_32 = helperFunction_100(promptChat, localValue_31), client = localValue_15 ? new taskWorkflow_e0({
           mode: astraTaskWorkflow,
@@ -31137,7 +31220,7 @@
         const localValue_34 = await responsesRequest_eb({
           promptChat: promptChat_2,
           tools: tools_2,
-          structuredOutputToolName: client ? null: structuredOutputToolName,
+          structuredOutputToolName: client ? (void 0): structuredOutputToolName,
           structuredOutputSchema: structuredOutputSchema,
           terminalToolName: roleplayContract.terminalToolName,
           additionalForcedToolNames: additionalForcedToolNames_2,
@@ -31461,7 +31544,7 @@
               costs: costs,
               usage: observability_e0_2(usage),
               modelId: baselineRequest.model,
-              serviceTier: localValue_17.profile.id === "vercel-ai-gateway" ? null: baselineRequest.service_tier,
+              serviceTier: localValue_17.profile.id === "vercel-ai-gateway" ? (void 0): baselineRequest.service_tier,
               totalRounds: usage.length
             }
             );
@@ -31565,7 +31648,7 @@
               costs: costs,
               usage: observability_e0_2(usage),
               modelId: baselineRequest.model,
-              serviceTier: (localValue_17.profile.id === "vercel-ai-gateway") ? null: baselineRequest.service_tier,
+              serviceTier: (localValue_17.profile.id === "vercel-ai-gateway") ? (void 0): baselineRequest.service_tier,
               totalRounds: usage.length
             }
             );
@@ -31596,7 +31679,7 @@
                 ... localValue_39.terminal,
                 toolExecuted: localValue_39.mcpCallCount > 0
               }
-              : null
+              : (void 0)
             }
             ;
           }
@@ -31657,7 +31740,7 @@
             }
             );
             const m5 = m4.receipt, m6 = registry.definitions.filter(m8 => {
-              return ((m8.name) === (roleplayContract.terminalToolName));
+              return (m8.name === roleplayContract.terminalToolName);
             }
             );
             if (m6.length !== 1) throw new argumentState[(((((((- 171)))))))]("The terminal manuscript tool is not uniquely available.", {
@@ -31986,7 +32069,7 @@
         return localValue_6;
       }
       function helperFunction_16(argument, argument_2, argument_3, cause) {
-        const localValue_6 = cause === null ? new Error(argument): new Error(argument, {
+        const localValue_6 = cause === (void 0) ? new Error(argument): new Error(argument, {
           cause: cause
         }
         );
@@ -32079,25 +32162,25 @@
           messages: (argument).messages,
           max_tokens: (argument).max_tokens,
           stream: (argument).stream,
-          ... (argument).temperature !== null ? {
+          ... (argument).temperature !== (void 0) ? {
             temperature: (argument).temperature
           }
           : {
           }
           ,
-          ... (argument).top_p !== null ? {
+          ... (argument).top_p !== (void 0) ? {
             top_p: (argument).top_p
           }
           : {
           }
           ,
-          ... (argument).prompt_cache_key !== null ? {
+          ... (argument).prompt_cache_key !== (void 0) ? {
             prompt_cache_key: (argument).prompt_cache_key
           }
           : {
           }
           ,
-          ... (argument).prompt_cache_options !== null ? {
+          ... (argument).prompt_cache_options !== (void 0) ? {
             prompt_cache_options: (argument).prompt_cache_options
           }
           : {
@@ -32109,7 +32192,7 @@
           : {
           }
           ,
-          ... (argument).tool_choice !== null ? {
+          ... (argument).tool_choice !== (void 0) ? {
             tool_choice: (argument).tool_choice
           }
           : {
@@ -32122,13 +32205,13 @@
           store: false,
           max_output_tokens: (argument).max_output_tokens,
           stream: (argument).stream,
-          ... (argument).reasoning !== null ? {
+          ... (argument).reasoning !== (void 0) ? {
             reasoning: (argument).reasoning
           }
           : {
           }
           ,
-          ... (argument).text !== null ? {
+          ... (argument).text !== (void 0) ? {
             text: (argument).text
           }
           : {
@@ -32140,31 +32223,31 @@
           : {
           }
           ,
-          ... (argument).temperature !== null ? {
+          ... (argument).temperature !== (void 0) ? {
             temperature: (argument).temperature
           }
           : {
           }
           ,
-          ... ((argument).top_p !== null) ? {
+          ... ((argument).top_p !== (void 0)) ? {
             top_p: (argument).top_p
           }
           : {
           }
           ,
-          ... ((argument).service_tier !== null) ? {
+          ... ((argument).service_tier !== (void 0)) ? {
             service_tier: (argument).service_tier
           }
           : {
           }
           ,
-          ... (argument).prompt_cache_key !== null ? {
+          ... (argument).prompt_cache_key !== (void 0) ? {
             prompt_cache_key: (argument).prompt_cache_key
           }
           : {
           }
           ,
-          ... (argument).prompt_cache_options !== null ? {
+          ... (argument).prompt_cache_options !== (void 0) ? {
             prompt_cache_options: (argument).prompt_cache_options
           }
           : {
@@ -32176,7 +32259,7 @@
           : {
           }
           ,
-          ... (argument).tool_choice !== null ? {
+          ... (argument).tool_choice !== (void 0) ? {
             tool_choice: (argument).tool_choice
           }
           : {
@@ -32258,12 +32341,12 @@
           }
         }
         ), localValue_11 = localValue_10.requestDialect === "chat-completions", background = responseTransport === "background-resume", localValue_12 = ! hostBufferedTransport && ! background, localValue_13 = (0, helperFunction_14)(submissionTool?.name, 120);
-        if (submissionTool !== null && ! localValue_13) throw new TypeError("A structured utility submission tool needs a name.");
+        if (submissionTool !== (void 0) && ! localValue_13) throw new TypeError("A structured utility submission tool needs a name.");
         if (background && (settingsRecord_2.tLwwe(localValue_8, localValue_11) || localValue_7.profile.backgroundResponses === "none" || ! localValue_10.backgroundResponses)) throw new TypeError("" + localValue_7.profile.label + " does not support background Responses.");
         const localValue_14 = await(0, responsesRequest_eb)({
           promptChat: promptChat,
           tools: localValue_13 ? [submissionTool]: [],
-          terminalToolName: localValue_13 || null,
+          terminalToolName: localValue_13 || (void 0),
           toolChoice: localValue_13 ? {
             type: "function",
             name: localValue_13
@@ -32271,8 +32354,8 @@
           : "auto",
           toolSelectionPolicy: toolSelectionPolicy,
           maxOutputTokens: maxOutputTokens,
-          temperature: localValue_6.temperature ?? null,
-          topP: generation.topP ?? null,
+          temperature: localValue_6.temperature ?? (void 0),
+          topP: generation.topP ?? (void 0),
           model: modelId,
           gatewayProfileId: localValue_7.profile.id,
           gatewayProviderOnly: gatewayProviderOnly,
@@ -32725,7 +32808,7 @@
         const items = [];
         for (const key of[providerSettings_eo_2, ... localValue_8]) {
           const localValue_10 = await argument.getItem(key);
-          localValue_10 !== null && localValue_10 !== null && items.push({
+          localValue_10 !== (void 0) && localValue_10 !== null && items.push({
             key: key,
             value: localValue_10
           }
@@ -32990,9 +33073,9 @@
       return settingsRecord_3;
     }
     function helperFunction_2(argument) {
-      if ((argument) === null || (argument) === null || (argument) === "") return null;
+      if ((argument) === null || (argument) === (void 0) || (argument) === "") return (void 0);
       const localValue_6 = typeof (argument) === "number" ? (argument): Number((argument));
-      return Number.isFinite(localValue_6) ? localValue_6: null;
+      return Number.isFinite(localValue_6) ? localValue_6: (void 0);
     }
     function helperFunction_3(argument, argument_2) {
       const localValue_6 = ((argument_2) === "plot-plan") ? "장기 플롯 계획": (argument_2) === "consolidate" ? "기억 병합": "기억 색인";
@@ -33070,15 +33153,15 @@
           void 0;
           void (argumentState.length = 2, localValue_6 = globalThis.setTimeout(() => {
             ;
-            const localValue_7 = new Error((("") + (argument_2)) + (" storage did not respond in time."));
-            void (localValue_7.code = ("diagnostic_storage_timeout"), argumentState[1](localValue_7));
+            const localValue_7 = new Error(("" + argument_2) + " storage did not respond in time.");
+            void (localValue_7.code = "diagnostic_storage_timeout", argumentState[1](localValue_7));
           }
           , numericValue));
         }
         )]);
       }
       finally {
-        localValue_6 !== null && globalThis.clearTimeout?.(localValue_6);
+        localValue_6 !== (void 0) && globalThis.clearTimeout?.(localValue_6);
       }
     }
     async function helperFunction_10({
@@ -33440,7 +33523,7 @@
                 hostBufferedTransport: hostBufferedTransport,
                 responseTransport: responseTransport,
                 requestTimeoutMs: argument.requestTimeoutMs,
-                copilotManagerClient: providerSettings.gatewayProfileId === "github-copilot" ? await helperFunction_18(): null,
+                copilotManagerClient: providerSettings.gatewayProfileId === "github-copilot" ? await helperFunction_18(): (void 0),
                 observation: observation,
                 runId: observation.runId,
                 requestLogRecorder: requestLogRecorder,
@@ -33650,7 +33733,7 @@
             hostBufferedTransport: hostBufferedTransport,
             responseTransport: responseTransport_2,
             requestTimeoutMs: providerSettings.requestTimeoutMinutes * 60000,
-            copilotManagerClient: providerSettings.gatewayProfileId === "github-copilot" ? await(0, helperFunction_18)(): null,
+            copilotManagerClient: providerSettings.gatewayProfileId === "github-copilot" ? await(0, helperFunction_18)(): (void 0),
             signal: signal,
             observation: observation,
             runId: observation.runId,
@@ -33828,7 +33911,7 @@
         = {
         }
         ) {
-          if ((routingSessionId !== null) && ! new RegExp("^mask-chat:[0-9a-f]{64}$", "").test(routingSessionId)) throw Object.assign(new Error("Invalid prose routing identity."), {
+          if ((routingSessionId !== (void 0)) && ! new RegExp("^mask-chat:[0-9a-f]{64}$", "").test(routingSessionId)) throw Object.assign(new Error("Invalid prose routing identity."), {
             code: "invalid_provider_setting"
           }
           );
@@ -33872,9 +33955,9 @@
               maxOutputTokens: textValue_7.maxOutputTokensOverride ?? 128000,
               generation: {
                 temperature: textValue_7.samplingMode === "temperature" ? textValue_7.customTemperature: null,
-                topP: textValue_7.samplingMode === "top-p" ? textValue_7.topP: null,
-                reasoningMode: textValue_7.reasoningMode === "pro" ? "pro": null,
-                reasoningContext: (textValue_7.reasoningContext === "default") ? null: textValue_7.reasoningContext,
+                topP: textValue_7.samplingMode === "top-p" ? textValue_7.topP: (void 0),
+                reasoningMode: textValue_7.reasoningMode === "pro" ? "pro": (void 0),
+                reasoningContext: (textValue_7.reasoningContext === "default") ? (void 0): textValue_7.reasoningContext,
                 reasoningEffort: (0, modelCapabilities_ec)({
                   modelId: textValue_8.modelId,
                   configuredEffort: textValue_7.reasoningEffort,
@@ -33906,7 +33989,7 @@
               }
               ),
               requestTimeoutMs: (textValue_7.requestTimeoutMinutes * 60000),
-              copilotManagerClient: textValue_7.gatewayProfileId === "github-copilot" ? await helperFunction_18(): null,
+              copilotManagerClient: textValue_7.gatewayProfileId === "github-copilot" ? await helperFunction_18(): (void 0),
               observation: observation,
               runId: observation.runId,
               requestLogRecorder: requestLogRecorder,
@@ -34147,7 +34230,7 @@
             hostBufferedTransport: webkitRuntime && localValue_18.responseTransport === "webkit-host-buffered"
           }
           ));
-          const temperature = localValue_18.samplingMode === "top-p" ? null: localValue_18.samplingMode === "temperature" ? localValue_18.customTemperature: helperFunction_2(args.temperature), topP = localValue_18.samplingMode === "top-p" ? localValue_18.topP: null, localValue_46 = enabledFlag_3 || enabledFlag_4 || enabledFlag_8 ? {
+          const temperature = localValue_18.samplingMode === "top-p" ? (void 0): localValue_18.samplingMode === "temperature" ? localValue_18.customTemperature: helperFunction_2(args.temperature), topP = localValue_18.samplingMode === "top-p" ? localValue_18.topP: (void 0), localValue_46 = enabledFlag_3 || enabledFlag_4 || enabledFlag_8 ? {
             maximumBreakpoints: 4,
             cacheSystem: true,
             cachePromptEnd: true,
@@ -34233,8 +34316,8 @@
             }
             ),
             reasoningSummary: localValue_18.reasoningSummary,
-            reasoningMode: localValue_18.reasoningMode === "pro" ? "pro": null,
-            reasoningContext: localValue_18.reasoningContext === "default" ? null: localValue_18.reasoningContext,
+            reasoningMode: localValue_18.reasoningMode === "pro" ? "pro": (void 0),
+            reasoningContext: localValue_18.reasoningContext === "default" ? (void 0): localValue_18.reasoningContext,
             verbosity: (0, modelCapabilities_ef)({
               modelId: modelId,
               verbosity: localValue_18.verbosity,
@@ -34242,7 +34325,7 @@
             }
             ),
             serviceTier: localValue_18.serviceTier,
-            truncation: localValue_18.truncation === "disabled" ? null: localValue_18.truncation,
+            truncation: localValue_18.truncation === "disabled" ? (void 0): localValue_18.truncation,
             compatibleParameterMode: compatibleParameterMode,
             compatibleCacheMode: localValue_3 ? "explicit": "implicit",
             chatTokenLimitField: localValue_22.chatTokenLimitField,
@@ -34265,7 +34348,7 @@
             activateSelectedContinuationContract: activateSelectedContinuationContract,
             activateQuarantinedApprovalReceipt: activateQuarantinedApprovalReceipt,
             sourceBoundQuarantineReceipt: enabledFlag_4 && activateQuarantinedApprovalReceipt,
-            sourceIdentityPromptChat: localValue_25 ? args.prompt_chat: null,
+            sourceIdentityPromptChat: localValue_25 ? args.prompt_chat: (void 0),
             prepareWriterSupplement: async() => {
               if (localValue_34) return "";
               let textValue_9 = "";
@@ -34315,7 +34398,7 @@
             fetchImpl: fetchImpl,
             hostBufferedFetchImpl: hostBufferedFetchImpl,
             transportProxyFetchImpl: transportProxyFetchImpl,
-            copilotManagerClient: localValue_18.gatewayProfileId === "github-copilot" ? await(0, helperFunction_18)(): null,
+            copilotManagerClient: localValue_18.gatewayProfileId === "github-copilot" ? await(0, helperFunction_18)(): (void 0),
             mcpRuntime: helperFunction_13(localValue_18, roleplayContract, {
               plainText: localValue_24 || settingsRecord_2.AACvj(enabledFlag_4, ! terminalToolEnabled),
               metadataPreseedRoleplay: preseedMetadataTools,
